@@ -26,4 +26,8 @@ class PageController extends Controller
         return view('main-pages.ueberuns');
     }
 
+    public function einreichen(){
+        return view('upload-pages.einreichen');
+    }
+
 }
