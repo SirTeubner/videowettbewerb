@@ -7,26 +7,13 @@ Route::get('/', function () {
     return view('main-pages.home');
 });
 
-Route::get('/ueberuns', function(){
-    return view('main-pages.ueberuns');
-})->name('ueberuns');
-
-Route::get('/gewinne', function(){
-    return view('main-pages.gewinne');
-})->name('gewinne');
-
-Route::get('/home', function(){
-    return view('main-pages.home');
-})->name('home');
-
-Route::get('/partner', function(){
-    return view('main-pages.partner');
-})->name('partner');
-
-Route::get('/teilnahme', function(){
-    return view('main-pages.teilnahme');
-})->name('teilnahme');
-
+Route::controller(\App\Http\Controllers\PageController::class)->group(function(){
+    Route::get('/ueberuns', 'ueberuns')->name('ueberuns');
+    Route::get('/gewinne', 'gewinne')->name('gewinne');
+    Route::get('/home', 'home')->name('home');
+    Route::get('/partner', 'partner')->name('partner');
+    Route::get('/teilnahme', 'teilnahme')->name('teilnahme');
+});
 
 
 
