@@ -1,10 +1,10 @@
-<nav x-data="{ open: false }" class="bg-black text-white px-6 py-4">
+<nav x-data="{ open: false }" class="bg-black text-white px-6 py-0">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto relative flex items-center justify-between h-16">
-        <div class="max-w-7xl mx-auto flex justify-center">
+        <div class="max-w-7xl mx-auto flex justify-center items-center">
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center gap-8">
+            <div class="hidden md:flex gap-10">
 
                 <!-- Über uns -->
                 <x-nav-link :href="route('ueberuns')" :active="request()->routeIs('ueberuns')">
@@ -38,6 +38,7 @@
                     Einreichen
                 </x-primary-button>
             </a>
+
 
 
             <!-- Settings Dropdown -->

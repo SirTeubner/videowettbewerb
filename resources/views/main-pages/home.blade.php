@@ -1,10 +1,10 @@
 <x-app-layout>
 
     <!--Schwarze Bubble mit Text und Bild-->
-    <div class="bg-black text-white px-6 py-10 rounded-3xl max-w-6xl mx-auto space-y-8 mt-6">
+    <div class="bg-black text-white px-6 py-10 rounded-full max-w-6xl mx-auto space-y-8 mt-6">
 
         <!--Überschrift-->
-        <h1 class="text-3xl font-bold text-white">
+        <h1 class="text-3xl font-bold text-white text-center">
             Der erste Pinzgauer Videowettbewerb
         </h1>
 
@@ -12,7 +12,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             <!--Textblock-->
-            <div class="space-y-4">
+            <div class="space-y-4 ml-20">
                 <h2 class="text-xl font-semibold text-white">
                     Was macht den Pinzgau für dich besonders?
                 </h2>
