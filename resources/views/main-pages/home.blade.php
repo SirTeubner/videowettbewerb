@@ -30,7 +30,7 @@
                     amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                     tempor invidunt ut labore et dolore magna aliquyam erat, sed
                 </p>
-                <a href="#" class="text-[#A594F9] underline hover:text-purple-400 transition">
+                <a href="{{ route('teilnahme') }}" class="text-brandpurple underline hover:text-purple-400 transition">
                     -> Mehr zu den Teilnahmebedingungen
                 </a>
             </div>
