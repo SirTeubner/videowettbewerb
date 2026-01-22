@@ -39,8 +39,6 @@
                 </x-primary-button>
             </a>
 
-
-
             <!-- Settings Dropdown -->
             @auth
                 <div class="hidden sm:flex sm:items-center sm:ms-6">

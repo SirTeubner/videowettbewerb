@@ -1,48 +1,44 @@
 <x-app-layout>
 
-    <!--Schwarze Bubble mit Text und Bild-->
-    <div class="bg-black text-white px-6 py-10 rounded-full max-w-6xl mx-auto space-y-8 mt-6">
+    <!-- Hauptbereich -->
+    <div class="bg-black text-white px-20 py-5 max-w-7xl mx-auto my-10 rounded-full space-y-16">
 
-        <!--Überschrift-->
-        <h1 class="text-3xl font-bold text-white text-center">
+        <!-- Überschrift -->
+        <h1 class="text-5xl font-bold text-center leading-tight">
             Der erste Pinzgauer Videowettbewerb
         </h1>
 
-        <!--Sub-Heading, Main-Text, Bild und Verlinkung-->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Text und Bild -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
 
-            <!--Textblock-->
-            <div class="space-y-4 ml-20">
-                <h2 class="text-xl font-semibold text-white">
+            <!-- Textblock -->
+            <div class="flex-1 space-y-6">
+                <h2 class="text-2xl font-semibold">
                     Was macht den Pinzgau für dich besonders?
                 </h2>
-                <p class="text-white text-base leading-relaxed">
-                    Unter diesem Motto starten wir (Arian, David, Noah und Samuel -
-                    aber mehr zu uns weiter unten) den ersten Video- und
-                    Fotowettbewerb für Jugendliche im Pinzgau. Dabei zählen wir
-                    auf euch. Ob Landschaft, Bräuche oder einfach nur die
-                    Menschen, was mögt ihr am liebsten im Pinzgau. Lorem ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo
-                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed
+
+                <p class="text-base leading-relaxed">
+                    Unter diesem Motto starten wir (das sind Arian, David, Noah und Samuel) den ersten Pinzgauer Video- und Fotowettbewerb für Jugendliche. Besser gesagt für Schüler und Schülerinnen der dritten und vierten Klasse Unterstufe. Der Videowettbewerb wird hierbei im Gruppenformat ausgetragen, während es beim Fotowettbewerb um Einzelleistungen geht. Unser Ziel ist es, dem Pinzgau ein neues Gesicht zu geben. Dabei geht es auch um euch, denn egal, was den Pinzgau für euch besonders macht, wir wollen es sehen. Ob Sport, Brauchtum, die Menschen oder etwas ganz anderes, ihr entscheidet. Also, startet gleich durch, wir freuen uns auf eure Videos und Fotos.
                 </p>
-                <a href="{{ route('teilnahme') }}" class="text-brandpurple underline hover:text-purple-400 transition">
-                    -> Mehr zu den Teilnahmebedingungen
+
+                <a href="{{ route('teilnahme') }}"
+                   class="text-brandpurple underline hover:text-purple-400 transition">
+                    → Mehr zu den Teilnahmebedingungen
                 </a>
             </div>
 
-            <!--Bildblock-->
-            <div>
-                <img src="#" alt="" class="w-full h-auto rounded-lg object-cover">
+            <!-- Bildblock -->
+            <div class="flex-1">
+                <img src="{{ asset('images/kuh.png') }}"
+                     alt="kuh"
+                     class="w-full max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
+
         </div>
 
-        <!--lila Balken-->
-        <div class="h-2 bg-[#A594F9] rounded-full ml-72">
-        </div>
+        <!-- Lila Balken -->
+        <div class="h-2 bg-[#A594F9] rounded-full w-1/2 mx-auto mt-12"></div>
+
     </div>
+
 </x-app-layout>
