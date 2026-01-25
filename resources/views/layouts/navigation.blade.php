@@ -89,42 +89,42 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 space-y-2">
+        <div>
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
+        <div>
             <x-responsive-nav-link :href="route('ueberuns')" :active="request()->routeIs('ueberuns')">
                 {{ __('Über uns') }}
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
+            <div>
             <x-responsive-nav-link :href="route('partner')" :active="request()->routeIs('partner')">
                 {{ __('Partner') }}
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
+        <div>
             <x-responsive-nav-link :href="route('teilnahme')" :active="request()->routeIs('teilnahme')">
                 {{ __('Teilnahme') }}
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
+        <div>
             <x-responsive-nav-link :href="route('gewinne')" :active="request()->routeIs('gewinne')">
                 {{ __('Gewinne') }}
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('einreichen')" :active="request()->routeIs('einreichen')">
-                {{ __('Einreichen') }}
-            </x-responsive-nav-link>
-        </div>
+        <a href="{{ route('einreichen') }}">
+            <x-primary-button class="mt-7">
+                Einreichen
+            </x-primary-button>
+        </a>
 
         @auth
         <!-- Responsive Settings Options
