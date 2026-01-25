@@ -1,7 +1,7 @@
 <x-app-layout>
 
     <!-- Hauptbereich -->
-    <div class="bg-black text-white px-20 py-5 max-w-7xl mx-auto my-10 rounded-full space-y-16">
+    <div class="bg-black text-white px-20 py-12 max-w-7xl mx-auto my-10 rounded-full space-y-10">
 
         <!-- Überschrift -->
         <h1 class="text-5xl font-bold text-center leading-tight">
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Lila Balken -->
-        <div class="h-2 bg-[#A594F9] rounded-full w-1/2 mx-auto mt-12"></div>
+        <div class="h-2 bg-[#A594F9] rounded-full w-1/2 mx-auto"></div>
 
     </div>
 
