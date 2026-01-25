@@ -1,10 +1,10 @@
-<nav x-data="{ open: false }" class="bg-black text-white px-6 py-0">
+<nav x-data="{ open: false }" class="bg-black text-white px-6 sm:px-4 py-0">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto relative flex items-center justify-between h-16">
-        <div class="max-w-7xl mx-auto flex justify-center items-center">
+        <div class="lg:mx-auto flex justify-center items-center">
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex gap-10">
+            <div class="hidden md:flex gap-6 lg:gap-10">
 
                 <!-- Über uns -->
                 <x-nav-link :href="route('ueberuns')" :active="request()->routeIs('ueberuns')">
@@ -33,13 +33,13 @@
             </div>
 
             <!-- Einreichen Button -->
-            <a href="{{ route('einreichen') }}" class="hidden sm:flex absolute right-6">
+            <a href="{{ route('einreichen') }}" class="hidden md:flex absolute right-6">
                 <x-primary-button>
                     Einreichen
                 </x-primary-button>
             </a>
 
-            <!-- Settings Dropdown -->
+            <!-- Settings Dropdown
             @auth
                 <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
@@ -60,7 +60,7 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <!-- Authentication -->
+                        <!- Authentication ->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
@@ -73,6 +73,7 @@
                     </x-slot>
                 </x-dropdown>
             </div>
+            -->
             @endauth
 
             <!-- Hamburger -->
@@ -126,7 +127,7 @@
         </div>
 
         @auth
-        <!-- Responsive Settings Options -->
+        <!-- Responsive Settings Options
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
@@ -138,7 +139,7 @@
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
-                <!-- Authentication -->
+                <!- Authentication ->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
@@ -150,6 +151,7 @@
                 </form>
             </div>
         </div>
+        -->
         @endauth
     </div>
 </nav>
