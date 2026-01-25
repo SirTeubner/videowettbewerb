@@ -1,8 +1,8 @@
 <x-app-layout>
 
-    <div class="bg-black text-white px-6 sm:px-10 md:px-20 py-8 sm:py-16 md:py-8 max-w-7xl mx-auto my-10 md:rounded-full sm:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-5-xl sm:text-4xl md:text-4xl font-bold text-center leading-tight">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
             Der erste Pinzgauer Videowettbewerb
         </h1>
 
@@ -31,6 +31,6 @@
 
         </div>
 
-        <div class="hidden md:flex h-1.5 bg-brandpurple rounded-full w-1/3 mx-auto mt-8"></div>
+        <div class="hidden lg:flex h-1.5 bg-brandpurple rounded-full w-1/3 mx-auto mt-8"></div>
     </div>
 </x-app-layout>
