@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" class="bg-black text-white px-6 sm:px-4 py-0">
+<nav x-data="{ open: false }" class="text-white sticky top-0">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto relative flex items-center justify-between h-16">
+    <div class="bg-black mx-auto relative flex items-center justify-between h-16 px-10">
         <div class="lg:mx-auto flex justify-center items-center">
 
             <!-- Navigation Links -->
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Einreichen Button -->
-            <a href="{{ route('einreichen') }}" class="hidden md:flex absolute right-6">
+            <a href="{{ route('einreichen') }}" class="hidden md:flex md:ms-10 lg:absolute lg:right-52">
                 <x-primary-button>
                     Einreichen
                 </x-primary-button>
@@ -95,8 +95,13 @@
         </div>
     </div>
 
+    <!-- Lila Trennlinie am linken Rand -->
+    <div class="block bg-transparent">
+        <hr class="border-brandpurple w-80 border-2">
+    </div>
+
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 space-y-2">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 space-y-2 bg-black">
         <div>
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
