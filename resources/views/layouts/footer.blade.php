@@ -1,5 +1,10 @@
-<footer class="bg-black text-white py-10 text-sm">
-    <div class="max-w-7xl mx-auto px-6">
+<footer class="text-white text-sm">
+    <!-- Lila Trennlinie am linken Rand -->
+    <div class="block bg-transparent">
+        <hr class="border-brandpurple w-80 border-2">
+    </div>
+
+    <div class="mx-auto px-6 py-10 bg-black">
 
         <!-- Instagram -->
         <div class="flex justify-center mb-2">
