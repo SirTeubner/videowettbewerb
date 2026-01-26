@@ -101,12 +101,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 space-y-2 bg-black">
-        <div>
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                {{ __('Home') }}
-            </x-responsive-nav-link>
-        </div>
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 px-5 space-y-2 bg-black">
 
         <div>
             <x-responsive-nav-link :href="route('ueberuns')" :active="request()->routeIs('ueberuns')">
