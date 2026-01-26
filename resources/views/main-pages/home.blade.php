@@ -51,7 +51,7 @@
                     Ein Wettbewerb wäre natürlich nichts ohne die passenden Preise. Und die haben wir definitiv für euch. Eines unserer Aushängeschilder ist dabei "Ihr Produkt" von "Ihr Unternehmen". Weiters gibt es auch "Ihr Produkt" von "Ihr Unternehmen" zu gewinnen.
                 </p>
 
-                <a href="{{ route('teilnahme') }}"
+                <a href="{{ route('gewinne') }}"
                    class="text-brandpurple underline hover:text-purple-400 transition">
                     → Mehr zu den Gewinnen
                 </a>
@@ -92,7 +92,7 @@
                     Partnern erhaltet ihr über den Link unten.
                 </p>
 
-                <a href="{{ route('teilnahme') }}"
+                <a href="{{ route('partner') }}"
                    class="text-brandpurple underline hover:text-purple-400 transition">
                     → Mehr zu unseren Partnern
                 </a>
@@ -135,7 +135,7 @@
                     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                 </p>
 
-                <a href="{{ route('teilnahme') }}"
+                <a href="{{ route('ueberuns') }}"
                    class="text-brandpurple underline hover:text-purple-400 transition">
                     → Mehr zu uns
                 </a>
