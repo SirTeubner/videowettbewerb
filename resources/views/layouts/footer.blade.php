@@ -1,3 +1,31 @@
-<footer>
+<footer class="bg-black text-white py-10 text-sm">
+    <div class="max-w-7xl mx-auto px-6">
 
+        <!-- Instagram -->
+        <div class="flex justify-center mb-2">
+            <a href="https://instagram.com" target="_blank" class="text-white hover:text-brandpurple transition">
+                <svg class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+                    <!-- Instagram SVG Pfad -->
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Platzhalter für Sponsorenlogos -->
+        <div class="text-center text-white text-2xl mb-4">
+            Sponsorenlogos
+        </div>
+
+        <!-- Trennlinie -->
+        <div class="flex justify-center mb-4">
+            <hr class="w-80 border-white/60 border-2">
+        </div>
+
+        <!-- Footer-Details -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-brandpurple text-base">
+            <div>by al / dm / nt / sh</div>
+            <div><a href="/impressum" class="hover:text-purple-400 transition">Impressum</a></div>
+            <div>all rights reserved</div>
+        </div>
+    </div>
 </footer>
