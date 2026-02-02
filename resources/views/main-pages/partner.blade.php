@@ -4,32 +4,10 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
 
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
-            Partner xy
+            Übersicht unserer Partner
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
-            <div class="flex-1 space-y-6">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    Hier kommt ein Text von Partner
-                </h2>
-
-                <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
-                </p>
-
-                <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
-                    → Mehr zu Partner xy
-                </a>
-            </div>
-
             <div class="flex-1">
                 <img src="{{ asset('images/kuh.png') }}"
                      alt="kuh"
