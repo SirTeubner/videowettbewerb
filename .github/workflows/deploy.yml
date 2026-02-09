@@ -2,39 +2,74 @@ name: Deploy Laravel App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      # Falls du eine bestimmte PHP-CLI auf dem Server hast (z.B. php8.1), lege ein Secret PHP_CLI an.
+      PHP_CLI: ${{ secrets.PHP_CLI != '' && secrets.PHP_CLI || 'php' }}
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'   # An deine Prod-Version anpassen (8.1/8.2/8.3)
+          tools: composer
+          coverage: none
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # --- Composer (prod) lokal im Runner ---
+      - name: Install Composer dependencies (no-dev, optimized)
+        run: |
+          composer install --no-dev --optimize-autoloader --prefer-dist --no-interaction
+
+      # --- Frontend Build ---
       - name: Install NPM dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build assets
         run: npm run build
 
-      - name: Upload build folder to server
+      # --- Artefakte absichern ---
+      - name: Verify build artifacts
+        run: |
+          test -f vendor/autoload.php
+          test -f public/build/manifest.json
+
+      # --- Release-Paket bauen (ohne node_modules/.git/.github; KEIN storage/.env) ---
+      - name: Create release archive
+        run: |
+          zip -r release.zip \
+            app bootstrap config database public resources routes vendor \
+            artisan composer.json composer.lock \
+            -x "node_modules/*" ".git/*" ".github/*" "storage/*" ".env" ".env.*"
+
+      # --- Upload release ---
+      - name: Upload release.zip to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "public/build/*"
-          target: "/www/htdocs/w02134a7/videowettbewerb/public/build"
+          source: "release.zip"
+          target: "/www/htdocs/w02134a7/videowettbewerb/tmp"
           overwrite: true
+          # optional empfohlen:
+          # fingerprint: ${{ secrets.SSH_FINGERPRINT }}
 
-      - name: Clear Laravel cache on server
+      # --- Server: Entpacken in bestehenden Pfad (ohne 'current'), .env & storage erhalten ---
+      - name: Deploy on server (unzip in-place, preserve .env & storage, clear caches)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -42,5 +77,56 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /www/htdocs/w02134a7/videowettbewerb
-            php artisan optimize:clear
+            set -e
+            APP_PATH="/www/htdocs/w02134a7/videowettbewerb"
+            TMP_PATH="$APP_PATH/tmp"
+            DEPLOY_DIR="$TMP_PATH/deploy"
+
+            mkdir -p "$TMP_PATH"
+            mkdir -p "$DEPLOY_DIR"
+
+            # Release ins Deploy-Temp entpacken
+            cd "$TMP_PATH"
+            unzip -oq release.zip -d "$DEPLOY_DIR"
+            rm -f release.zip
+
+            # Sicherstellen, dass .env nicht überschrieben wird
+            rm -f "$DEPLOY_DIR/.env" 2>/dev/null || true
+
+            # storage nicht aus dem Paket verwenden (Uploads/Runtime-Daten erhalten)
+            rm -rf "$DEPLOY_DIR/storage" 2>/dev/null || true
+
+            # Vorher Altlasten löschen, die konsistent sein müssen
+            rm -rf "$APP_PATH/vendor" "$APP_PATH/public/build"
+
+            # Dateien ins Ziel kopieren (bestehende Struktur bleibt, Dateien werden überschrieben)
+            cp -a "$DEPLOY_DIR/"* "$APP_PATH/"
+
+            # Aufräumen Temp
+            rm -rf "$DEPLOY_DIR"
+
+            # Symlink für public/storage (falls nötig)
+            cd "$APP_PATH"
+            ${{ env.PHP_CLI }} artisan storage:link || true
+
+            # Rechte für Laravel
+            chmod -R 775 "$APP_PATH/storage" "$APP_PATH/bootstrap/cache" || true
+            find "$APP_PATH/storage" -type f -exec chmod 664 {} \; || true
+            find "$APP_PATH/bootstrap/cache" -type f -exec chmod 664 {} \; || true
+
+            # Caches leeren (neuer Code aktiv)
+            ${{ env.PHP_CLI }} artisan optimize:clear || true
+
+            # Optional: OPcache reset (falls verfügbar)
+            ${{ env.PHP_CLI }} -r 'if(function_exists("opcache_reset")){opcache_reset(); echo "OPcache reset\n";} else {echo "OPcache NA\n";}'
+
+      # --- Optional: Smoke-Test Datei (kannst du entfernen, wenn alles läuft) ---
+      - name: Write deploy marker
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            date -u +"deploy: %Y-%m-%dT%H:%M:%SZ" > /www/htdocs/w02134a7/videowettbewerb/public/deploy.txt
