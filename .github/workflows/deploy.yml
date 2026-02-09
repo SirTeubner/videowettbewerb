@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -23,6 +23,19 @@ jobs:
       - name: Build assets
         run: npm run build
 
+      # (SERVER) Zielverzeichnis absichern (anlegen + Rechte)
+      - name: Ensure target directory exists on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            mkdir -p /www/htdocs/w02134a7/videowettbewerb/public/build
+            chmod -R 775 /www/htdocs/w02134a7/videowettbewerb/public
+
+      # (SERVER) Assets rekursiv hochladen (inkl. Unterordner 'assets')
       - name: Upload build folder to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -30,10 +43,14 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "public/build/*"
-          target: "/www/htdocs/w02134a7/videowettbewerb/public/build"
+          # Wichtig: rekursiv – doppelte Sterne
+          source: public/build/**
+          target: /www/htdocs/w02134a7/videowettbewerb/public/build
           overwrite: true
+          # optional empfohlen:
+          # fingerprint: ${{ secrets.SSH_FINGERPRINT }}
 
+      # (SERVER) Laravel-Caches korrekt leeren (KEIN deutscher Text in derselben Zeile)
       - name: Clear Laravel cache on server
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -43,4 +60,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /www/htdocs/w02134a7/videowettbewerb
-            php artisan optimize:clear
+            php artisan optimize:clear || php8.1 artisan optimize:clear || php8.2 artisan optimize:clear
