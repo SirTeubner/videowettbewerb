@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/main/gewinne.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/main/gewinne.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/main/gewinne.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -142,7 +142,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/main/gewinne.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>

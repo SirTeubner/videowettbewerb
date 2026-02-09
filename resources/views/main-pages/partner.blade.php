@@ -9,7 +9,7 @@
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/partner/uebersicht.png') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/partner/platzhalter.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -91,7 +91,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/partner/platzhalter.jpg.png') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
@@ -132,7 +132,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/kuh.png') }}"
+                <img src="{{ asset('images/partner/platzhalter.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
