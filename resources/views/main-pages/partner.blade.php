@@ -81,7 +81,7 @@
                     ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
                     sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                     dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
+                    consetetur sadipscing elitr, sed diam n clita
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
