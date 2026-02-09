@@ -2,56 +2,70 @@ name: Deploy Laravel App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      PHP_CLI: ${{ secrets.PHP_CLI != '' && secrets.PHP_CLI || 'php' }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'   # Passe an deine prod-Version an (8.1/8.2/8.3)
+          tools: composer
+          coverage: none
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # --- Composer (prod) ---
+      - name: Install Composer dependencies (no-dev, optimized)
+        run: |
+          composer install --no-dev --optimize-autoloader --prefer-dist --no-interaction
+
+      # --- Frontend Build ---
       - name: Install NPM dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build assets
         run: npm run build
 
-      # (SERVER) Zielverzeichnis absichern (anlegen + Rechte)
-      - name: Ensure target directory exists on server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          script: |
-            mkdir -p /www/htdocs/w02134a7/videowettbewerb/public/build
-            chmod -R 775 /www/htdocs/w02134a7/videowettbewerb/public
+      # --- Prüfen, dass wichtige Artefakte vorhanden sind ---
+      - name: Verify build artifacts
+        run: |
+          test -f vendor/autoload.php
+          test -f public/build/manifest.json
 
-      # (SERVER) Assets rekursiv hochladen (inkl. Unterordner 'assets')
-      - name: Upload build folder to server
+      # --- Release-Paket bauen ---
+      - name: Create release archive
+        run: |
+          zip -r release.zip \
+            app bootstrap config database public resources routes vendor \
+            artisan composer.json composer.lock \
+            --exclude "node_modules/*" ".git/*" ".github/*" "storage/*"
+
+      # --- Upload Release ---
+      - name: Upload release.zip to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          # Wichtig: rekursiv – doppelte Sterne
-          source: public/build/**
-          target: /www/htdocs/w02134a7/videowettbewerb/public/build
-          overwrite: true
-          # optional empfohlen:
-          # fingerprint: ${{ secrets.SSH_FINGERPRINT }}
+          source: "release.zip"
+          target: "/www/htdocs/w02134a7/videowettbewerb"
 
-      # (SERVER) Laravel-Caches korrekt leeren (KEIN deutscher Text in derselben Zeile)
-      - name: Clear Laravel cache on server
+      # --- Servervorbereitung & Aktivierung ---
+      - name: Deploy on server (unzip, swap, cache clear, perms)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -59,5 +73,75 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /www/htdocs/w02134a7/videowettbewerb
-            php artisan optimize:clear || php8.1 artisan optimize:clear || php8.2 artisan optimize:clear
+            set -e
+            APP_PATH="/www/htdocs/w02134a7/videowettbewerb"
+            RELEASE_DIR="$APP_PATH/releases/$(date +%Y%m%d%H%M%S)"
+            CURRENT="$APP_PATH/current"
+
+            # Ordnerstruktur sicherstellen
+            mkdir -p "$APP_PATH/releases" "$APP_PATH/storage" "$APP_PATH/public"
+            mkdir -p "$RELEASE_DIR"
+
+            # Release entpacken
+            mv "$APP_PATH/release.zip" "$RELEASE_DIR/"
+            cd "$RELEASE_DIR"
+            unzip -oq release.zip
+            rm -f release.zip
+
+            # .env aus der bestehenden Instanz übernehmen (muss existieren)
+            if [ -f "$CURRENT/.env" ]; then
+              cp -p "$CURRENT/.env" "$RELEASE_DIR/.env"
+            elif [ -f "$APP_PATH/.env" ]; then
+              cp -p "$APP_PATH/.env" "$RELEASE_DIR/.env"
+            else
+              echo "WARN: Keine .env gefunden. Bitte lege eine .env im APP_PATH ab."
+            fi
+
+            # Storage-Verzeichnis persistent halten (shared)
+            # 1) Falls current/storage existiert, als canonical betrachten
+            if [ -d "$CURRENT/storage" ]; then
+              rm -rf "$RELEASE_DIR/storage"
+              ln -s "$APP_PATH/storage" "$RELEASE_DIR/storage"
+            else
+              # Erster Rollout: falls storage noch nicht persistent war
+              if [ -d "$RELEASE_DIR/storage" ]; then
+                mv "$RELEASE_DIR/storage" "$APP_PATH/storage" 2>/dev/null || true
+              fi
+              rm -rf "$RELEASE_DIR/storage"
+              ln -s "$APP_PATH/storage" "$RELEASE_DIR/storage"
+            fi
+
+            # public/storage Symlink (Uploads verfügbar machen)
+            cd "$RELEASE_DIR"
+            ${{ env.PHP_CLI }} artisan storage:link || true
+
+            # Rechte (angepasst für KAS)
+            chmod -R 775 "$APP_PATH/storage" "$RELEASE_DIR/bootstrap/cache" || true
+            find "$APP_PATH/storage" -type f -exec chmod 664 {} \; || true
+            find "$RELEASE_DIR/bootstrap/cache" -type f -exec chmod 664 {} \; || true
+
+            # Caches leeren (im neuen Release)
+            ${{ env.PHP_CLI }} artisan optimize:clear || true
+
+            # Atomar auf "current" schalten
+            # Wenn Symlinks im Docroot nicht gewünscht sind, kannst du stattdessen direkt ins APP_PATH deployen.
+            ln -sfn "$RELEASE_DIR" "$CURRENT"
+
+            # Optional: public auf das current/public linken (falls dein Domain-Dokumentenstamm nicht direkt auf current/public zeigt)
+            # ln -sfn "$CURRENT/public" "$APP_PATH/public"
+
+            # Optional: OPcache reset (wenn erlaubt)
+            ${{ env.PHP_CLI }} -r 'if(function_exists("opcache_reset")){opcache_reset(); echo "OPcache reset\n";} else {echo "OPcache NA\n";}'
+
+      # --- Optional: alten Müll entsorgen (z. B. Releases > 5 behalten) ---
+      - name: Cleanup old releases (keep last 5)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            APP_PATH="/www/htdocs/w02134a7/videowettbewerb"
+            cd "$APP_PATH/releases" || exit 0
+            ls -1t | tail -n +6 | xargs -r rm -rf
