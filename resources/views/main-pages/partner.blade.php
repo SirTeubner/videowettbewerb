@@ -70,7 +70,7 @@
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    Hier kommt ein Text von Partner
+                    Hier kommt ein Text von einem Partner
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
