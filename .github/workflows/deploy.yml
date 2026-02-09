@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      # Falls du eine bestimmte PHP-CLI auf dem Server hast (z.B. php8.1), lege ein Secret PHP_CLI an.
       PHP_CLI: ${{ secrets.PHP_CLI != '' && secrets.PHP_CLI || 'php' }}
 
     steps:
@@ -18,7 +19,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'   # Passe an deine prod-Version an (8.1/8.2/8.3)
+          php-version: '8.2'   # An deine Prod-Version anpassen (8.1/8.2/8.3)
           tools: composer
           coverage: none
 
@@ -27,7 +28,7 @@ jobs:
         with:
           node-version: 18
 
-      # --- Composer (prod) ---
+      # --- Composer (prod) lokal im Runner ---
       - name: Install Composer dependencies (no-dev, optimized)
         run: |
           composer install --no-dev --optimize-autoloader --prefer-dist --no-interaction
@@ -39,21 +40,21 @@ jobs:
       - name: Build assets
         run: npm run build
 
-      # --- Prüfen, dass wichtige Artefakte vorhanden sind ---
+      # --- Artefakte absichern ---
       - name: Verify build artifacts
         run: |
           test -f vendor/autoload.php
           test -f public/build/manifest.json
 
-      # --- Release-Paket bauen ---
+      # --- Release-Paket bauen (ohne node_modules/.git/.github; KEIN storage/.env) ---
       - name: Create release archive
         run: |
           zip -r release.zip \
             app bootstrap config database public resources routes vendor \
             artisan composer.json composer.lock \
-            --exclude "node_modules/*" ".git/*" ".github/*" "storage/*"
+            -x "node_modules/*" ".git/*" ".github/*" "storage/*" ".env" ".env.*"
 
-      # --- Upload Release ---
+      # --- Upload release ---
       - name: Upload release.zip to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -62,10 +63,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "release.zip"
-          target: "/www/htdocs/w02134a7/videowettbewerb"
+          target: "/www/htdocs/w02134a7/videowettbewerb/tmp"
+          overwrite: true
+          # optional empfohlen:
+          # fingerprint: ${{ secrets.SSH_FINGERPRINT }}
 
-      # --- Servervorbereitung & Aktivierung ---
-      - name: Deploy on server (unzip, swap, cache clear, perms)
+      # --- Server: Entpacken in bestehenden Pfad (ohne 'current'), .env & storage erhalten ---
+      - name: Deploy on server (unzip in-place, preserve .env & storage, clear caches)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -75,66 +79,49 @@ jobs:
           script: |
             set -e
             APP_PATH="/www/htdocs/w02134a7/videowettbewerb"
-            RELEASE_DIR="$APP_PATH/releases/$(date +%Y%m%d%H%M%S)"
-            CURRENT="$APP_PATH/current"
+            TMP_PATH="$APP_PATH/tmp"
+            DEPLOY_DIR="$TMP_PATH/deploy"
 
-            # Ordnerstruktur sicherstellen
-            mkdir -p "$APP_PATH/releases" "$APP_PATH/storage" "$APP_PATH/public"
-            mkdir -p "$RELEASE_DIR"
+            mkdir -p "$TMP_PATH"
+            mkdir -p "$DEPLOY_DIR"
 
-            # Release entpacken
-            mv "$APP_PATH/release.zip" "$RELEASE_DIR/"
-            cd "$RELEASE_DIR"
-            unzip -oq release.zip
+            # Release ins Deploy-Temp entpacken
+            cd "$TMP_PATH"
+            unzip -oq release.zip -d "$DEPLOY_DIR"
             rm -f release.zip
 
-            # .env aus der bestehenden Instanz übernehmen (muss existieren)
-            if [ -f "$CURRENT/.env" ]; then
-              cp -p "$CURRENT/.env" "$RELEASE_DIR/.env"
-            elif [ -f "$APP_PATH/.env" ]; then
-              cp -p "$APP_PATH/.env" "$RELEASE_DIR/.env"
-            else
-              echo "WARN: Keine .env gefunden. Bitte lege eine .env im APP_PATH ab."
-            fi
+            # Sicherstellen, dass .env nicht überschrieben wird
+            rm -f "$DEPLOY_DIR/.env" 2>/dev/null || true
 
-            # Storage-Verzeichnis persistent halten (shared)
-            # 1) Falls current/storage existiert, als canonical betrachten
-            if [ -d "$CURRENT/storage" ]; then
-              rm -rf "$RELEASE_DIR/storage"
-              ln -s "$APP_PATH/storage" "$RELEASE_DIR/storage"
-            else
-              # Erster Rollout: falls storage noch nicht persistent war
-              if [ -d "$RELEASE_DIR/storage" ]; then
-                mv "$RELEASE_DIR/storage" "$APP_PATH/storage" 2>/dev/null || true
-              fi
-              rm -rf "$RELEASE_DIR/storage"
-              ln -s "$APP_PATH/storage" "$RELEASE_DIR/storage"
-            fi
+            # storage nicht aus dem Paket verwenden (Uploads/Runtime-Daten erhalten)
+            rm -rf "$DEPLOY_DIR/storage" 2>/dev/null || true
 
-            # public/storage Symlink (Uploads verfügbar machen)
-            cd "$RELEASE_DIR"
+            # Vorher Altlasten löschen, die konsistent sein müssen
+            rm -rf "$APP_PATH/vendor" "$APP_PATH/public/build"
+
+            # Dateien ins Ziel kopieren (bestehende Struktur bleibt, Dateien werden überschrieben)
+            cp -a "$DEPLOY_DIR/"* "$APP_PATH/"
+
+            # Aufräumen Temp
+            rm -rf "$DEPLOY_DIR"
+
+            # Symlink für public/storage (falls nötig)
+            cd "$APP_PATH"
             ${{ env.PHP_CLI }} artisan storage:link || true
 
-            # Rechte (angepasst für KAS)
-            chmod -R 775 "$APP_PATH/storage" "$RELEASE_DIR/bootstrap/cache" || true
+            # Rechte für Laravel
+            chmod -R 775 "$APP_PATH/storage" "$APP_PATH/bootstrap/cache" || true
             find "$APP_PATH/storage" -type f -exec chmod 664 {} \; || true
-            find "$RELEASE_DIR/bootstrap/cache" -type f -exec chmod 664 {} \; || true
+            find "$APP_PATH/bootstrap/cache" -type f -exec chmod 664 {} \; || true
 
-            # Caches leeren (im neuen Release)
+            # Caches leeren (neuer Code aktiv)
             ${{ env.PHP_CLI }} artisan optimize:clear || true
 
-            # Atomar auf "current" schalten
-            # Wenn Symlinks im Docroot nicht gewünscht sind, kannst du stattdessen direkt ins APP_PATH deployen.
-            ln -sfn "$RELEASE_DIR" "$CURRENT"
-
-            # Optional: public auf das current/public linken (falls dein Domain-Dokumentenstamm nicht direkt auf current/public zeigt)
-            # ln -sfn "$CURRENT/public" "$APP_PATH/public"
-
-            # Optional: OPcache reset (wenn erlaubt)
+            # Optional: OPcache reset (falls verfügbar)
             ${{ env.PHP_CLI }} -r 'if(function_exists("opcache_reset")){opcache_reset(); echo "OPcache reset\n";} else {echo "OPcache NA\n";}'
 
-      # --- Optional: alten Müll entsorgen (z. B. Releases > 5 behalten) ---
-      - name: Cleanup old releases (keep last 5)
+      # --- Optional: Smoke-Test Datei (kannst du entfernen, wenn alles läuft) ---
+      - name: Write deploy marker
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -142,6 +129,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            APP_PATH="/www/htdocs/w02134a7/videowettbewerb"
-            cd "$APP_PATH/releases" || exit 0
-            ls -1t | tail -n +6 | xargs -r rm -rf
+            date -u +"deploy: %Y-%m-%dT%H:%M:%SZ" > /www/htdocs/w02134a7/videowettbewerb/public/deploy.txt
