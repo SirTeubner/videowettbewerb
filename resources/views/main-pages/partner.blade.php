@@ -81,7 +81,7 @@
                     ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
                     sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                     dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita
+                    consetetur sadipscing elitr, sed diam n
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
@@ -91,7 +91,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/partner/platzhalter.jpg.png') }}"
+                <img src="{{ asset('images/partner/platzhalter.jpg') }}"
                      alt="kuh"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
