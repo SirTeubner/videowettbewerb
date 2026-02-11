@@ -14,14 +14,20 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
+                    Hi,
+                    ich bin Arian und kümmere mich bei uns um den Bereich
+                    Marketing. Dabei geht es für mich vor allem darum, kreative Ideen
+                    zu entwickeln und Inhalte so aufzubereiten, dass sie nicht nur gut
+                    aussehen, sondern auch wirken. Ich habe ein gutes Auge für
+                    Details, Designs und Trends und versuche immer, das Gesamtbild
+                    im Blick zu behalten – egal ob bei Kampagnen, Social Media oder
+                    anderen Marketingthemen.
+                    Privat bin ich gerne sportlich aktiv oder verbringe meine Zeit am
+                    PC, wo ich mich ebenfalls kreativ austoben kann.
+                </p>
+
+                <p class="text-brandpurple">
+                    @arian_lackner
                 </p>
             </div>
 
@@ -50,14 +56,20 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
+                    Hi,
+                    ich bin David und im Projekt für Sponsoren, Partner und die Preise
+                    zuständig. Zu meinen Aufgaben gehört es, Unternehmen zu finden,
+                    die uns finanziell oder durch Sachleistungen unterstützen. Diese
+                    Unterstützung ist notwendig, um Kosten zu decken und den
+                    Teilnehmern attraktive Preise bieten zu können. Dabei lege ich
+                    Wert auf verlässliche Kooperationen und eine saubere
+                    Abstimmung mit dem restlichen Team.
+                    In meiner Freizeit bin ich gerne draußen unterwegs. Außerdem
+                    reise ich gerne und entdecke neue Orte.
+                </p>
+
+                <p class="text-brandpurple">
+                    @dxvid.msk_
                 </p>
             </div>
 
@@ -85,15 +97,13 @@
                     Zuständigkeitsbereich: Website
                 </h2>
 
-                <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
+                <p class="text-sm sm:text-base leading-relaxed text-justify">
+                    Ich bin bei uns für alle technischen Bereiche der Website verantwortlich. Dazu gehört unter anderem sicherzustellen, dass die Seite stabil, schnell und ohne Störungen läuft. Außerdem kümmere ich mich darum, dass eure eingereichten Videos zuverlässig bei uns ankommen. Da mich Computer und Technik bereits seit meiner Kindheit begeistern, sehe ich diese Aufgaben nicht als klassische Arbeit, sondern vielmehr als eine Tätigkeit, die mir Spaß macht und mich immer wieder neu motiviert.
+                    Um die viele Zeit vor dem Bildschirm auszugleichen, verbringe ich meine Freizeit am liebsten in der Natur. Besonders gerne bin ich in den Bergen unterwegs – sowohl mit als auch ohne Skiausrüstung. Wenn ich nicht gerade auf einem Gipfel stehe, findet man mich häufig auf dem Motorrad oder ganz klassisch im Fitnessstudio.
+                </p>
+
+                <p class="text-brandpurple">
+                    @teubner.noah
                 </p>
             </div>
 
@@ -122,14 +132,19 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam n clita kasd gubergren
+                    Hi,
+                    ich bin Samuel und arbeite im Bereich Corporate Design. Warum?
+                    Naja, ich entwickle gerne neue Dinge auf kreativer Ebene, egal ob
+                    das Design für eine Website, ein neues Logo oder einfach nur
+                    Texte. Außerdem sollte ich bei unserem Projekt immer den
+                    Überblick behalten, das gelingt zwar nicht immer perfekt aber
+                    dafür habe ich ja kompetente Teammitglieder an Bord.
+                    Privat bin ich gern sportlich unterwegs. Ob Sommer oder Winter -
+                    im Pinzgau wird es dabei eigentlich nie langweilig.
+                </p>
+
+                <p class="text-brandpurple">
+                    @samuelhirk
                 </p>
             </div>
 
