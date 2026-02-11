@@ -26,9 +26,9 @@
                     PC, wo ich mich ebenfalls kreativ austoben kann.
                 </p>
 
-                <p class="text-brandpurple">
+                <a href="https://www.instagram.com/arian_lackner/" class="text-brandpurple">
                     @arian_lackner
-                </p>
+                </a>
             </div>
 
             <div class="flex-1">
@@ -68,9 +68,9 @@
                     reise ich gerne und entdecke neue Orte.
                 </p>
 
-                <p class="text-brandpurple">
+                <a href="https://www.instagram.com/dxvid.msk_/" class="text-brandpurple">
                     @dxvid.msk_
-                </p>
+                </a>
             </div>
 
             <div class="flex-1">
@@ -97,14 +97,14 @@
                     Zuständigkeitsbereich: Website
                 </h2>
 
-                <p class="text-sm sm:text-base leading-relaxed text-justify">
+                <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Ich bin bei uns für alle technischen Bereiche der Website verantwortlich. Dazu gehört unter anderem sicherzustellen, dass die Seite stabil, schnell und ohne Störungen läuft. Außerdem kümmere ich mich darum, dass eure eingereichten Videos zuverlässig bei uns ankommen. Da mich Computer und Technik bereits seit meiner Kindheit begeistern, sehe ich diese Aufgaben nicht als klassische Arbeit, sondern vielmehr als eine Tätigkeit, die mir Spaß macht und mich immer wieder neu motiviert.
                     Um die viele Zeit vor dem Bildschirm auszugleichen, verbringe ich meine Freizeit am liebsten in der Natur. Besonders gerne bin ich in den Bergen unterwegs – sowohl mit als auch ohne Skiausrüstung. Wenn ich nicht gerade auf einem Gipfel stehe, findet man mich häufig auf dem Motorrad oder ganz klassisch im Fitnessstudio.
                 </p>
 
-                <p class="text-brandpurple">
+                <a href="https://www.instagram.com/teubner.noah/" class="text-brandpurple">
                     @teubner.noah
-                </p>
+                </a>
             </div>
 
             <div class="flex-1">
@@ -143,9 +143,9 @@
                     im Pinzgau wird es dabei eigentlich nie langweilig.
                 </p>
 
-                <p class="text-brandpurple">
+                <a href="https://www.instagram.com/samuelhirk/" class="text-brandpurple">
                     @samuelhirk
-                </p>
+                </a>
             </div>
 
             <div class="flex-1">
