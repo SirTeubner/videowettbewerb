@@ -25,7 +25,7 @@
 
             <div class="flex-1">
                 <img src="{{ asset('images/main/wettbewerb.jpg') }}"
-                     alt="kuh"
+                     alt="pinzgau"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
         </div>
@@ -59,7 +59,7 @@
 
             <div class="flex-1">
                 <img src="{{ asset('images/main/gewinne.jpg') }}"
-                     alt="kuh"
+                     alt="preis"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
         </div>
@@ -100,7 +100,7 @@
 
             <div class="flex-1">
                 <img src="{{ asset('images/main/partner.png') }}"
-                     alt="kuh"
+                     alt="partnerlogos"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
         </div>
@@ -134,7 +134,7 @@
 
             <div class="flex-1">
                 <img src="{{ asset('images/main/wir.jpeg') }}"
-                     alt="kuh"
+                     alt="wir vier"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
         </div>
