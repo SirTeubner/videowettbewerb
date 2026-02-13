@@ -30,4 +30,8 @@ class PageController extends Controller
         return view('upload-pages.einreichen');
     }
 
+    public function impressum(){
+        return view('main-pages.impressum');
+    }
+
 }

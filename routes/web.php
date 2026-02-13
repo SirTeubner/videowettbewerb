@@ -14,6 +14,7 @@ Route::controller(\App\Http\Controllers\PageController::class)->group(function()
     Route::get('/partner', 'partner')->name('partner');
     Route::get('/teilnahme', 'teilnahme')->name('teilnahme');
     Route::get('/einreichen', 'einreichen')->name('einreichen');
+    Route::get('/impressum', 'impressum')->name('impressum');
 });
 
 

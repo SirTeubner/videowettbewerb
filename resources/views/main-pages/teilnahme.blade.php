@@ -7,14 +7,12 @@
             Das Wichtigste
         </h1>
 
-        <!-- EINSPALTIG wie im Poster -->
         <div class="space-y-8 px-4 sm:px-8 md:px-10 text-sm sm:text-base leading-relaxed">
 
             <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                 Thema: Was macht den Pinzgau für dich besonders?
             </h2>
 
-            <!-- Liste OHNE Bullets – wie im Poster -->
             <div class="space-y-1">
                 <p>- Videodauer: 3–6 Minuten</p>
                 <p>- Videoformat: Hoch- oder Querformat</p>
