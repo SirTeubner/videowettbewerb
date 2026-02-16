@@ -8,7 +8,7 @@
 
         <!-- Instagram -->
         <div class="flex justify-center mb-2">
-            <a href="https://instagram.com" target="_blank" class="text-white hover:text-brandpurple transition">
+            <a href="https://instagram.com/videowettbewerb_pinzgau" target="_blank" class="text-white hover:text-brandpurple transition">
                 <svg class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
                     <!-- Instagram SVG Pfad -->
                     <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
