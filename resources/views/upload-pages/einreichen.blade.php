@@ -1,33 +1,102 @@
+{{-- resources/views/einreichen.blade.php --}}
 <x-app-layout>
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Einreichen') }}
+        </h2>
+    </x-slot>
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
-            Video einreichen
-        </h1>
+    <div class="py-8">
+        <div class="mx-auto max-w-3xl sm:px-6 lg:px-8">
+            {{-- Success Message --}}
+            @if(session('success'))
+                <div class="mb-6 rounded-md border border-green-300 bg-green-50 px-4 py-3 text-green-700 dark:bg-green-900/30 dark:text-green-200">
+                    {{ session('success') }}
+                </div>
+            @endif
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
-            <div class="flex-1 space-y-6">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    Mitmachen lohnt sich!
-                </h2>
+            {{-- Optional: globale Fehlerliste --}}
+            @if($errors->any())
+                <div class="mb-6 rounded-md border border-red-300 bg-red-50 px-4 py-3 text-red-700 dark:bg-red-900/30 dark:text-red-200">
+                    <strong>Es sind Fehler aufgetreten:</strong>
+                    <ul class="list-disc ps-5 mt-2">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-                <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Ein Wettbewerb wäre natürlich nichts ohne die passenden Preise. Und die haben wir definitiv für euch. Eines unserer Aushängeschilder ist dabei "Ihr Produkt" von "Ihr Unternehmen". Weiters gibt es auch "Ihr Produkt" von "Ihr Unternehmen" zu gewinnen.
-                </p>
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <form method="POST" action="{{ route('einreichen.store') }}" class="space-y-6" novalidate>
+                        @csrf
 
-                <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
-                    → Mehr zu den Gewinnen
-                </a>
-            </div>
+                        {{-- E-Mail --}}
+                        <div>
+                            <x-input-label for="email" :value="__('E‑Mail')" />
+                            <x-text-input
+                                id="email"
+                                name="email"
+                                type="email"
+                                class="mt-1 block w-full"
+                                :value="old('email')"
+                                required
+                                autocomplete="email"
+                                placeholder="name@example.com"
+                            />
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
 
-            <div class="flex-1">
-                <img src="{{ asset('images/main/gewinne.jpg') }}"
-                     alt="kuh"
-                     class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
+                        {{-- Benutzername --}}
+                        <div>
+                            <x-input-label for="username" :value="__('Benutzername')" />
+                            <x-text-input
+                                id="username"
+                                name="username"
+                                type="text"
+                                class="mt-1 block w-full"
+                                :value="old('username')"
+                                required
+                                minlength="3"
+                                autocomplete="username"
+                                placeholder="z. B. max_muster"
+                            />
+                            <x-input-error :messages="$errors->get('username')" class="mt-2" />
+                        </div>
+
+                        {{-- URL --}}
+                        <div>
+                            <x-input-label for="url" :value="__('URL')" />
+                            <x-text-input
+                                id="url"
+                                name="url"
+                                type="url"
+                                class="mt-1 block w-full"
+                                :value="old('url')"
+                                required
+                                inputmode="url"
+                                placeholder="https://beispiel.de"
+                            />
+                            <x-input-error :messages="$errors->get('url')" class="mt-2" />
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                                Bitte vollständige URL inkl. <code>https://</code> angeben.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <x-primary-button>
+                                {{ __('Absenden') }}
+                            </x-primary-button>
+
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                                Dauer: wenige Sekunden
+                            </p>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
-
-        <div class="hidden lg:flex h-1.5 bg-brandpurple rounded-full w-1/3 mx-auto mt-8"></div>
     </div>
 </x-app-layout>

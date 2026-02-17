@@ -126,7 +126,7 @@
                 {{ __('Gewinne') }}
             </x-responsive-nav-link>
         </div>
-
+        
         <a href="{{ route('einreichen') }}">
             <x-primary-button class="mt-7">
                 Einreichen

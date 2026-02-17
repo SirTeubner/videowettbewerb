@@ -13,10 +13,11 @@ Route::controller(\App\Http\Controllers\PageController::class)->group(function()
     Route::get('/home', 'home')->name('home');
     Route::get('/partner', 'partner')->name('partner');
     Route::get('/teilnahme', 'teilnahme')->name('teilnahme');
-    Route::get('/einreichen', 'einreichen')->name('einreichen');
     Route::get('/impressum', 'impressum')->name('impressum');
 });
 
+Route::get('/einreichen', [\App\Http\Controllers\EinreichenController::class, 'create'])->name('einreichen');
+Route::post('/einreichen',[ \App\Http\Controllers\EinreichenController::class, 'store'])->name('einreichen.store');
 
 
 Route::middleware('auth')->group(function () {
