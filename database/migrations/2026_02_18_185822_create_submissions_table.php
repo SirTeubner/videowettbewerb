@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->string('username');
+            $table->string('vorname');
+            $table->string('nachname');
+            $table->string('schule');
             $table->string('url');
             $table->timestamps();
         });

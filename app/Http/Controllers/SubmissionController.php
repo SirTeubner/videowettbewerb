@@ -18,7 +18,9 @@ class SubmissionController extends Controller
     {
         $validated = $request->validate([
             'email' => 'required|email',
-            'username' => 'required|min:3',
+            'vorname' => 'required|min:3',
+            'nachname' => 'required|min:3',
+            'schule' => 'required|min:3',
             'url' => 'required|url',
         ]);
 

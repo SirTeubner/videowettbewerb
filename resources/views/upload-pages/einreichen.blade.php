@@ -1,97 +1,165 @@
-{{-- resources/views/einreichen.blade.php --}}
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Einreichen') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-8">
-        <div class="mx-auto max-w-3xl sm:px-6 lg:px-8">
-            {{-- Success Message --}}
-            @if(session('success'))
-                <div class="mb-6 rounded-md border border-green-300 bg-green-50 px-4 py-3 text-green-700 dark:bg-green-900/30 dark:text-green-200">
-                    {{ session('success') }}
-                </div>
-            @endif
+    <div class="py-16">
+        <div class="mx-auto max-w-6xl px-4">
+            {{-- Schwarzer, stark abgerundeter Container --}}
+            <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl">
+                <div class="max-w-xl text-gray-200">
+                    {{-- Success --}}
+                    @if(session('success'))
+                        <div class="mb-6 rounded-md border border-green-500/40 bg-green-500/10 px-4 py-3 text-green-300">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
-            {{-- Optional: globale Fehlerliste --}}
-            @if($errors->any())
-                <div class="mb-6 rounded-md border border-red-300 bg-red-50 px-4 py-3 text-red-700 dark:bg-red-900/30 dark:text-red-200">
-                    <strong>Es sind Fehler aufgetreten:</strong>
-                    <ul class="list-disc ps-5 mt-2">
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+                    {{-- Errors --}}
+                    @if($errors->any())
+                        <div class="mb-6 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-3 text-red-300">
+                            <ul class="list-disc ps-5">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form method="POST" action="{{ route('einreichen.store') }}" class="space-y-6" novalidate>
+                    <form method="POST" action="{{ route('einreichen.store') }}" class="space-y-5">
                         @csrf
 
                         {{-- E-Mail --}}
                         <div>
-                            <x-input-label for="email" :value="__('E‑Mail')" />
-                            <x-text-input
+                            <label for="email" class="block text-sm text-gray-300 mb-1">Email</label>
+                            <input
                                 id="email"
-                                name="email"
                                 type="email"
-                                class="mt-1 block w-full"
-                                :value="old('email')"
+                                name="email"
+                                value="{{ old('email') }}"
                                 required
-                                autocomplete="email"
-                                placeholder="name@example.com"
-                            />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                placeholder="Email eingeben…"
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                       border border-gray-600/70
+                                       placeholder:text-gray-500
+                                       focus:border-indigo-400 focus:ring-0"
+                            >
+                            @error('email')
+                            <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        {{-- Benutzername --}}
+                        {{-- Vorname --}}
                         <div>
-                            <x-input-label for="username" :value="__('Benutzername')" />
-                            <x-text-input
-                                id="username"
-                                name="username"
+                            <label for="vorname" class="block text-sm text-gray-300 mb-1">Vorname</label>
+                            <input
+                                id="vorname"
                                 type="text"
-                                class="mt-1 block w-full"
-                                :value="old('username')"
+                                name="vorname"
+                                value="{{ old('vorname') }}"
                                 required
-                                minlength="3"
-                                autocomplete="username"
-                                placeholder="z. B. max_muster"
-                            />
-                            <x-input-error :messages="$errors->get('username')" class="mt-2" />
+                                placeholder="Vornamen eingeben…"
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                       border border-gray-600/70
+                                       placeholder:text-gray-500
+                                       focus:border-indigo-400 focus:ring-0"
+                            >
+                            @error('vorname')
+                            <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        {{-- URL --}}
+                        {{-- Nachname --}}
                         <div>
-                            <x-input-label for="url" :value="__('URL')" />
-                            <x-text-input
-                                id="url"
-                                name="url"
-                                type="url"
-                                class="mt-1 block w-full"
-                                :value="old('url')"
+                            <label for="nachname" class="block text-sm text-gray-300 mb-1">Nachname</label>
+                            <input
+                                id="nachname"
+                                type="text"
+                                name="nachname"
+                                value="{{ old('nachname') }}"
                                 required
-                                inputmode="url"
-                                placeholder="https://beispiel.de"
-                            />
-                            <x-input-error :messages="$errors->get('url')" class="mt-2" />
-                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                                Bitte vollständige URL inkl. <code>https://</code> angeben.
-                            </p>
+                                placeholder="Nachnamen eingeben…"
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                       border border-gray-600/70
+                                       placeholder:text-gray-500
+                                       focus:border-indigo-400 focus:ring-0"
+                            >
+                            @error('nachname')
+                            <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        <div class="flex items-center gap-3">
-                            <x-primary-button>
-                                {{ __('Absenden') }}
-                            </x-primary-button>
-
+                        {{-- Schule (Select) --}}
+                        <div>
+                            <label for="schule" class="block text-sm text-gray-300 mb-1">Schule</label>
+                            <select
+                                id="schule"
+                                name="schule"
+                                required
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                       border border-gray-600/70
+                                       focus:border-indigo-400 focus:ring-0"
+                            >
+                                <option value="" disabled {{ old('schule') ? '' : 'selected' }}>Schule auswählen…</option>
+                                {{-- Beispieloptionen – später dynamisch befüllen --}}
+                                <option value="schule_a" @selected(old('schule')==='schule_a')>Schule A</option>
+                                <option value="schule_b" @selected(old('schule')==='schule_b')>Schule B</option>
+                                <option value="schule_c" @selected(old('schule')==='schule_c')>Schule C</option>
+                            </select>
+                            @error('schule')
+                            <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
+
+                        {{-- Video Link --}}
+                        <div>
+                            <label for="url" class="block text-sm text-gray-300 mb-1">Video Link</label>
+                            <input
+                                id="url"
+                                type="url"
+                                name="url"
+                                value="{{ old('url') }}"
+                                required
+                                placeholder="Video Link eingeben…"
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                       border border-indigo-500/70
+                                       placeholder:text-gray-500
+                                       focus:border-indigo-400 focus:ring-0"
+                            >
+                            @error('url')
+                            <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        {{-- AGB / Teilnahmebedingungen Checkbox --}}
+                        <div class="flex items-start gap-2 text-sm text-gray-400">
+                            <input
+                                id="agb"
+                                type="checkbox"
+                                name="agb"
+                                value="1"
+                                required
+                                class="mt-1 rounded border-gray-600 bg-black text-indigo-500 focus:ring-indigo-500 focus:ring-offset-0"
+                            >
+                            <label for="agb">Ich akzeptiere die <a href="{{ route('teilnahme') }}" class="text-brandpurple underline">Teilnahmebedingungen</a></label>
+                        </div>
+                        @error('agb')
+                        <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
+                        @enderror
+
+                        {{-- Submit --}}
+                        <div class="pt-2">
+                            <button
+                                type="submit"
+                                class="w-40 rounded-full border border-indigo-500 px-6 py-2
+                                       text-indigo-300 transition
+                                       hover:bg-indigo-500 hover:text-black"
+                            >
+                                Einreichen
+                            </button>
+                        </div>
+
+                        <p class="pt-1 text-xs text-gray-500">
+                            * alle Felder müssen befüllt werden
+                        </p>
                     </form>
-
                 </div>
             </div>
         </div>
