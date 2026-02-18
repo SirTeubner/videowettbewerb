@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Einreichen;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 
-class EinreichenController extends Controller
+class SubmissionController extends Controller
 {
 
     public function create()
@@ -22,10 +22,10 @@ class EinreichenController extends Controller
             'url' => 'required|url',
         ]);
 
-        Einreichen::create($validated);
+        Submission::create($validated);
 
         return redirect()->back()->with('success', 'Daten erfolgreich gespeichert!');
-
-
     }
+
+
 }

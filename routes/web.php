@@ -16,8 +16,8 @@ Route::controller(\App\Http\Controllers\PageController::class)->group(function()
     Route::get('/impressum', 'impressum')->name('impressum');
 });
 
-Route::get('/einreichen', [\App\Http\Controllers\EinreichenController::class, 'create'])->name('einreichen');
-Route::post('/einreichen',[ \App\Http\Controllers\EinreichenController::class, 'store'])->name('einreichen.store');
+Route::get('/einreichen', [\App\Http\Controllers\SubmissionController::class, 'create'])->name('einreichen');
+Route::post('/einreichen',[ \App\Http\Controllers\SubmissionController::class, 'store'])->name('einreichen.store');
 
 
 Route::middleware('auth')->group(function () {
