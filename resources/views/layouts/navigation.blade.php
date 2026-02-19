@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="text-white sticky top-0">
+<nav x-data="{ open: false }" class="text-white sticky top-0 z-10">
     <!-- Primary Navigation Menu -->
     <div class="bg-black mx-auto relative flex items-center justify-between h-16 px-10">
         <div class="lg:mx-auto flex justify-center items-center">
@@ -126,7 +126,7 @@
                 {{ __('Gewinne') }}
             </x-responsive-nav-link>
         </div>
-        
+
         <a href="{{ route('einreichen') }}">
             <x-primary-button class="mt-7">
                 Einreichen

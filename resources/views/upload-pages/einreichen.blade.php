@@ -2,7 +2,7 @@
 
     <div class="py-16">
         <div class="mx-auto max-w-6xl px-4">
-            {{-- Schwarzer, stark abgerundeter Container --}}
+
             <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl">
                 <div class="max-w-xl text-gray-200">
                     {{-- Success --}}
