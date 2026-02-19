@@ -14,7 +14,16 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Unter diesem Motto starten wir (das sind Arian, Dave, Noah und Samuel) den ersten Pinzgauer Videowettbewerb für Jugendliche. Besser gesagt für Schüler und Schülerinnen der Unterstufe, also Mittelschule und Gymnasium. Unser Ziel ist es, dem Pinzgau ein neues Gesicht zu geben. Dabei geht es auch um euch, denn egal, was den Pinzgau für euch besonders macht, wir wollen es sehen. Ob Sport, Brauch, die Menschen oder etwas ganz anderes, ihr entscheidet. Also, startet gleich durch, wir freuen uns auf eure Beiträge. Nähere Infos zu Teilnahmeschluss und -bedingungen findet ihr unten.
+                    Unter diesem Motto starten wir (das sind Arian, Dave, Noah und
+                    Samuel) den ersten Pinzgauer Videowettbewerb für Jugendliche.
+                    Besser gesagt für Schüler und Schülerinnen der Unterstufe, also
+                    Mittelschule und Gymnasium. Unser Ziel ist es, dem Pinzgau ein
+                    neues Gesicht zu geben. Dabei geht es auch um euch, denn egal,
+                    was den Pinzgau für euch besonders macht, wir wollen es sehen. Ob
+                    Sport, Brauch, die Menschen oder etwas ganz anderes, ihr
+                    entscheidet. Also, startet gleich durch, wir freuen uns auf eure
+                    Beiträge. Nähere Infos zu Teilnahmeschluss und -bedingungen
+                    findet ihr unten.
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
@@ -48,7 +57,16 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Ein Wettbewerb wäre natürlich nichts ohne die passenden Preise. Und die können wir dank unserer Partner auch bereitstellen. Den Sieger bzw. das Siegerteam erwartet unter anderem ... von .... Doch auch die dahinter platzierten Teilnehmer erhalten stattliche Preise, beispielsweise ... von .... Und selbst wenn ihr nicht unter den Ersten seid, unter allen Teilnehmern wird ein ... von ... verlost, mitmachen lohnt sich also doppelt: Nicht nur gebt ihr dem Pinzgau mit eueren Videos ein neues Gesicht sondern habt gleichzeitig auch die Chance auf hochwertige Preise. Demnach, nichts wie ran an die Kamera, die Preise warten. Nähere Infos zu den Gewinnen gibts unten.
+                    Ein Wettbewerb wäre natürlich nichts ohne die passenden Preise.
+                    Und die können wir dank unserer Partner auch bereitstellen. Den
+                    Sieger bzw. das Siegerteam erwartet unter anderem … von …. Doch
+                    auch die dahinter platzierten Teilnehmer erhalten stattliche Preise,
+                    beispielsweise … von …. Und selbst wenn ihr nicht unter den Ersten
+                    seid, unter allen Teilnehmern wird ein … von … verlost, mitmachen
+                    lohnt sich also doppelt: Nicht nur gebt ihr dem Pinzgau mit euren
+                    Videos ein neues Gesicht sondern habt gleichzeitig auch die Chance
+                    auf hochwertige Preise. Demnach, nichts wie ran an die Kamera, die
+                    Preise warten. Nähere Infos zu den Gewinnen gibt’s unten.
                 </p>
 
                 <a href="{{ route('gewinne') }}"
@@ -78,18 +96,20 @@
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    Ohne unsere Partner wäre das nicht möglich
+                    Vielen Dank an alle Partner für die Unterstützung!
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Solch ein Projekt bringt nicht nur einen organisatorischen Aufwand mit
-                    sich, sondern auch gewisse Kosten. Diese Kosten wollen gedeckt
-                    werden. Unsere Partner tragen einen wesentlichen Teil dazu bei, daher
-                    verdienen Sie auch einen besonderen Platz in unserem Projekt. Auch
-                    die große Vielfalt an Preisen wäre ohne unsere Partner in der Form
-                    nicht möglich. Deshalb an dieser Stelle einmal ein großes Dankeschön
-                    an alle unsere Partner. Genauere Infos und weitere Angebote von unseren
-                    Partnern erhaltet ihr über den Link unten. Also informiert euch gerne über die Unternehmen, die hinter diesem Projekt stehen und es erst möglich machen.
+                    Solch ein Projekt bringt nicht nur einen organisatorischen Aufwand
+                    mit sich, sondern auch gewisse Kosten. Diese Kosten wollen
+                    gedeckt werden. Unsere Partner tragen einen wesentlichen Teil dazu
+                    bei, daher verdienen auch sie einen besonderen Platz in diesem
+                    Projekt. Auch die große Vielfalt an Preisen wäre ohne unsere Partner
+                    in dieser Form nicht möglich. Deshalb an dieser Stelle einmal ein
+                    großes Dankeschön an alle unsere Partner. Genauere Infos und
+                    weitere Angebote von unseren Partnern erhaltet ihr über den Link
+                    unten. Also informiert euch gerne über die Unternehmen, die hinter
+                    diesem Projekt stehen und es erst möglich machen.
                 </p>
 
                 <a href="{{ route('partner') }}"
@@ -119,11 +139,20 @@
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    Vier Maturanten mit einer Vision
+                    Vier Maturanten der HAK Zell am See
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Seit nunmehr vier Jahren sehen wir uns fast täglich im Klassenraum und auch privat haben sich unsere Wege immer öfter getroffen. Daher war jedem von uns schnell klar, mit wem dieses Projekt umgesetzt werden soll. Ein solch umfangreiches Projekt erfordert natürlich eine perfekte Arbeitsteilung und die sieht wie folgt aus: Während sich Arian um's Marketing kümmert, betreut Dave unsere Partner. Gleichzeitig ist Noah für den technischen Teil der Website zuständig und Samuel zeigt sich für's Corporate Design unseres Projekts verantwortlich. Wenn ihr mehr über uns erfahren wollt, laden wir euch ein, auf den Link unten zu klicken.
+                    Seit nunmehr vier Jahren sehen wir uns fast täglich im Klassenraum
+                    und auch privat haben sich unsere Wege immer öfter getroffen.
+                    Daher war jedem von uns schnell klar, mit wem dieses Projekt
+                    umgesetzt werden soll. Ein solch umfangreiches Projekt erfordert
+                    natürlich eine perfekte Arbeitsteilung und die sieht wie folgt aus:
+                    Während sich Arian um’s Marketing kümmert, betreut Dave unsere
+                    Partner. Gleichzeitig ist Noah für den technischen Teil der Website
+                    zuständig und Samuel zeigt sich für’s Corporate Design unseres
+                    Projekts verantwortlich. Wenn ihr mehr über uns erfahren wollt,
+                    laden wir euch ein, auf den Link unten zu klicken.
                 </p>
 
                 <a href="{{ route('ueberuns') }}"
