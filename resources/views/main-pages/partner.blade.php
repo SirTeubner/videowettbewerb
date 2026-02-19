@@ -44,7 +44,7 @@
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu Partner xy
                 </a>
             </div>
@@ -85,7 +85,7 @@
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu Partner xy
                 </a>
             </div>
@@ -126,7 +126,7 @@
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu Partner xy
                 </a>
             </div>

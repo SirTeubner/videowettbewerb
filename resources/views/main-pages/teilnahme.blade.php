@@ -29,7 +29,7 @@
 
             <p class="text-brandpurple font-medium pb-5">
                 Bei weiteren Fragen bitten wir um Kontaktaufnahme über Instagram
-                (instagram.com/pinzgauervideowettbewerb) oder per E‑Mail (2026@videowettbewerb.at).
+                (<a class="underline hover:font-bold" href="https://instagram.com/videowettbewerb_pinzgau">instagram.com/videowettbewerb_pinzgau</a>) oder per E‑Mail (<a class="underline hover:font-bold" href="mailto:2026@videowettbewerb.at">2026@videowettbewerb.at</a>).
             </p>
 
         </div>

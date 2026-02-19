@@ -27,7 +27,7 @@
                 </p>
 
                 <a href="{{ route('teilnahme') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu den Teilnahmebedingungen
                 </a>
             </div>
@@ -70,7 +70,7 @@
                 </p>
 
                 <a href="{{ route('gewinne') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu den Gewinnen
                 </a>
             </div>
@@ -113,7 +113,7 @@
                 </p>
 
                 <a href="{{ route('partner') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu unseren Partnern
                 </a>
             </div>
@@ -156,7 +156,7 @@
                 </p>
 
                 <a href="{{ route('ueberuns') }}"
-                   class="text-brandpurple underline hover:text-purple-400 transition">
+                   class="text-brandpurple underline hover:font-bold transition">
                     → Mehr zu uns
                 </a>
             </div>

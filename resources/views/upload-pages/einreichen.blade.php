@@ -39,7 +39,7 @@
                                 class="w-full rounded-full bg-black px-4 py-2 text-gray-200
                                        border border-gray-600/70
                                        placeholder:text-gray-500
-                                       focus:border-indigo-400 focus:ring-0"
+                                       focus:border-brandpurple focus:ring-0"
                             >
                             @error('email')
                             <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
@@ -59,7 +59,7 @@
                                 class="w-full rounded-full bg-black px-4 py-2 text-gray-200
                                        border border-gray-600/70
                                        placeholder:text-gray-500
-                                       focus:border-indigo-400 focus:ring-0"
+                                       focus:border-brandpurple focus:ring-0"
                             >
                             @error('vorname')
                             <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
@@ -76,10 +76,10 @@
                                 value="{{ old('nachname') }}"
                                 required
                                 placeholder="Nachnamen eingeben…"
-                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-500
                                        border border-gray-600/70
                                        placeholder:text-gray-500
-                                       focus:border-indigo-400 focus:ring-0"
+                                       focus:border-brandpurple focus:ring-0"
                             >
                             @error('nachname')
                             <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
@@ -93,9 +93,9 @@
                                 id="schule"
                                 name="schule"
                                 required
-                                class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                class="w-full rounded-full bg-black px-4 py-2 text-gray-500
                                        border border-gray-600/70
-                                       focus:border-indigo-400 focus:ring-0"
+                                       focus:border-brandpurple focus:ring-0"
                             >
                                 <option value="" disabled {{ old('schule') ? '' : 'selected' }}>Schule auswählen…</option>
                                 {{-- Beispieloptionen – später dynamisch befüllen --}}
@@ -119,9 +119,9 @@
                                 required
                                 placeholder="Video Link eingeben…"
                                 class="w-full rounded-full bg-black px-4 py-2 text-gray-200
-                                       border border-indigo-500/70
+                                       border border-gray-600/70
                                        placeholder:text-gray-500
-                                       focus:border-indigo-400 focus:ring-0"
+                                       focus:border-brandpurple focus:ring-0"
                             >
                             @error('url')
                             <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
@@ -138,7 +138,7 @@
                                 required
                                 class="mt-1 rounded border-gray-600 bg-black text-indigo-500 focus:ring-indigo-500 focus:ring-offset-0"
                             >
-                            <label for="agb">Ich akzeptiere die <a href="{{ route('teilnahme') }}" class="text-brandpurple underline">Teilnahmebedingungen</a></label>
+                            <label for="agb">Ich akzeptiere die <a href="{{ route('teilnahme') }}" class="text-brandpurple underline hover:font-bold">Teilnahmebedingungen</a></label>
                         </div>
                         @error('agb')
                         <p class="mt-1 text-xs text-red-400">{{ $message }}</p>
@@ -148,10 +148,10 @@
                         <div class="pt-2">
                             <button
                                 type="submit"
-                                class="w-40 rounded-full border border-indigo-500 px-6 py-2
-                                       text-indigo-300 transition
-                                       hover:bg-indigo-500 hover:text-black"
-                            >
+                                class="w-40 rounded-full border border-brandpurple  px-6 py-2
+                                       text-brandpurple transition
+                                       font-bold
+                                       hover:bg-brandpurple hover:text-black">
                                 Einreichen
                             </button>
                         </div>
