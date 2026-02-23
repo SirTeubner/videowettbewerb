@@ -1,7 +1,7 @@
 <footer class="text-white text-sm">
     <!-- Lila Trennlinie am linken Rand -->
     <div class="block bg-transparent">
-        <hr class="border-brandpurple w-80 border-2">
+        <hr class="border-brandpurple md:w-80 border-2">
     </div>
 
     <div class="mx-auto px-6 py-10 bg-black">
@@ -23,13 +23,13 @@
 
         <!-- Trennlinie -->
         <div class="flex justify-center mb-4">
-            <hr class="w-80 border-white/60 border-2">
+            <hr class="w-96 border-white border-2">
         </div>
 
         <!-- Footer-Details -->
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-brandpurple text-base">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-8 text-brandpurple text-base">
             <div>by al / dm / nt / sh</div>
-            <div><a href="/impressum" class="hover:text-purple-400 transition">Impressum</a></div>
+            <div><a href="/impressum" class="text-brandpurple hover:font-bold transition">Impressum</a></div>
             <div>all rights reserved</div>
         </div>
     </div>

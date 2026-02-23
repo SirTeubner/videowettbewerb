@@ -1,9 +1,9 @@
 <x-app-layout>
 
     <!-- Abschnitt 1 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Arian
         </h1>
 
@@ -26,7 +26,7 @@
                     PC, wo ich mich ebenfalls kreativ austoben kann.
                 </p>
 
-                <a href="https://www.instagram.com/arian_lackner/" class="text-brandpurple hover:font-bold">
+                <a href="https://www.instagram.com/arian_lackner/" class="text-brandpurple hover:font-bold px-4">
                     @arian_lackner
                 </a>
             </div>
@@ -43,13 +43,13 @@
     <!-- Ende Abschnitt 1 -->
 
     <!-- Abschnitt 2 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Dave
         </h1>
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
+        <div class="flex flex-col md:flex-row-reverse items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     Zuständigkeitsbereich: Partnerbetreuung
@@ -68,7 +68,7 @@
                     reise ich gerne und entdecke neue Orte.
                 </p>
 
-                <a href="https://www.instagram.com/dxvid.msk_/" class="text-brandpurple hover:font-bold">
+                <a href="https://www.instagram.com/dxvid.msk_/" class="text-brandpurple hover:font-bold px-4">
                     @dxvid.msk_
                 </a>
             </div>
@@ -85,9 +85,9 @@
     <!-- Ende Abschnitt 2 -->
 
     <!-- Abschnitt 3 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Noah
         </h1>
 
@@ -102,7 +102,7 @@
                     Um die viele Zeit vor dem Bildschirm auszugleichen, verbringe ich meine Freizeit am liebsten in der Natur. Besonders gerne bin ich in den Bergen unterwegs – sowohl mit als auch ohne Skiausrüstung. Wenn ich nicht gerade auf einem Gipfel stehe, findet man mich häufig auf dem Motorrad oder ganz klassisch im Fitnessstudio.
                 </p>
 
-                <a href="https://www.instagram.com/teubner.noah/" class="text-brandpurple hover:font-bold">
+                <a href="https://www.instagram.com/teubner.noah/" class="text-brandpurple hover:font-bold px-4">
                     @teubner.noah
                 </a>
             </div>
@@ -119,13 +119,13 @@
     <!-- Ende Abschnitt 3 -->
 
     <!-- Abschnitt 4 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Samuel
         </h1>
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
+        <div class="flex flex-col md:flex-row-reverse items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     Zuständigkeitsbereich: Corporate Design
@@ -143,7 +143,7 @@
                     im Pinzgau wird es dabei eigentlich nie langweilig.
                 </p>
 
-                <a href="https://www.instagram.com/samuelhirk/" class="text-brandpurple hover:font-bold">
+                <a href="https://www.instagram.com/samuelhirk/" class="text-brandpurple hover:font-bold px-4">
                     @samuelhirk
                 </a>
             </div>

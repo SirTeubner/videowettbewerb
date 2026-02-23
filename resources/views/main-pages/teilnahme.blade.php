@@ -1,9 +1,9 @@
 <x-app-layout>
 
     <!-- Abschnitt 1 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Das Wichtigste
         </h1>
 
@@ -37,9 +37,9 @@
     <!-- Ende Abschnitt 1 -->
 
     <!-- Langfassung -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-10 lg:rounded-3xl md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto mt-1 md:my-10 lg:rounded-3xl md:rounded-none space-y-10">
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Langfassung
         </h1>
 
@@ -58,7 +58,7 @@
                     5700 Zell am See <br>
                     Östereich
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     2. Teilnahmeberechtigt
@@ -80,7 +80,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Die Teilnahme setzt das Einverständnis eines Erziehungsberechtigten voraus.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     3. Wettbewerbszeitraum
@@ -93,7 +93,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Später eingereichte Beiträge können nicht berücksichtigt werden
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     4. Anforderungen an die Beiträge
@@ -110,7 +110,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Das Video muss von den Teilnehmenden selbst erstellt worden sein.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     5. Ausschluss von Inhalten
@@ -147,7 +147,7 @@
                     Die Veranstalter behalten sich das Recht vor, Beiträge ohne Angabe von Gründen vom Wettbewerb <br>
                     auszuschließen.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     6. Urheber- und Nutzungsrechte
@@ -166,7 +166,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Eine kommerzielle Nutzung erfolgt nicht.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     7. Persönlichkeitsrechte & Einwilligung
@@ -183,7 +183,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Auf Anfrage sind entsprechende Einverständniserklärungen vorzulegen.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     8. Bewertung & Gewinne
@@ -200,7 +200,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Die Gewinner werden nach Wettbewerbsende verständigt.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     9. Datenschutz
@@ -217,7 +217,7 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Nach Abschluss des Wettbewerbs werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
                 </p>
-                <div class="hidden lg:flex h-0.5 bg-white rounded-full w-1/2 mt-8"></div>
+                <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
                 <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
                     10. Sonstiges

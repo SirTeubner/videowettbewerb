@@ -1,9 +1,13 @@
 <x-app-layout>
 
-    <div class="py-16">
+    <div class="py-6">
         <div class="mx-auto max-w-6xl px-4">
 
             <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight text-white  ">
+                    Video einreichen
+                </h1>
+
                 <div class="max-w-xl text-gray-200">
                     {{-- Success --}}
                     @if(session('success'))
