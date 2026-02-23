@@ -160,7 +160,7 @@
                             </button>
                         </div>
 
-                        <p class="pt-1 text-xs text-gray-500">
+                        <p class="pt-1 text-xs text-white">
                             * alle Felder müssen befüllt werden
                         </p>
                     </form>
