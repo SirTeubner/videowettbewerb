@@ -1,7 +1,7 @@
 <x-app-layout>
 
     <!-- Abschnitt 1 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Übersicht unserer Partner
@@ -20,7 +20,7 @@
     <!-- Ende Abschnitt 1 -->
 
     <!-- Abschnitt 2 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Partner xy
@@ -61,7 +61,7 @@
     <!-- Ende Abschnitt 2 -->
 
     <!-- Abschnitt 3 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Partner xy
@@ -102,7 +102,7 @@
     <!-- Ende Abschnitt 3 -->
 
     <!-- Abschnitt 4 -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Partner xy

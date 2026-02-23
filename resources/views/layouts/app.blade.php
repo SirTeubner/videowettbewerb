@@ -19,11 +19,11 @@
     </head>
     <body class="font-sans antialiased bg-gray-100 min-h-screen flex flex-col">
 
-    <div class="flex-1 bg-gray-100 dark:bg-gray-600">
+    <div class="flex-1 bg-white dark:bg-black">
         @include('layouts.navigation')
 
         @isset($header)
-            <header class="bg-white dark:bg-gray-800 shadow">
+            <header>
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
@@ -33,10 +33,8 @@
         <main>
             {{ $slot }}
         </main>
+
+        @include('layouts.footer')
     </div>
-
-    @include('layouts.footer')
-
     </body>
-
 </html>

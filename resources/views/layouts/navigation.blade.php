@@ -40,7 +40,7 @@
             </div>
 
            <!-- Navbar sm screen -->
-            <div class="relative flex items-center w-full sm:hidden">
+            <div class="relative flex items-center w-full md:hidden">
 
                 <!-- Hamburger -->
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-white">
@@ -51,7 +51,7 @@
                 </button>
 
                 <!-- Logo -->
-                <a href="{{ route('home') }}" class="sm:hidden translate-x-1/2 flex items-center">
+                <a href="{{ route('home') }}" class="md:hidden flex items-center">
                     <x-application-logo class="h-10 w-auto" />
                 </a>
             </div>
@@ -64,7 +64,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden py-5 px-5 space-y-2 bg-black">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden py-5 px-5 space-y-2 bg-black">
 
         <div>
             <x-responsive-nav-link :href="route('ueberuns')" :active="request()->routeIs('ueberuns')">

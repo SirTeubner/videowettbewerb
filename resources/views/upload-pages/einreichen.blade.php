@@ -3,7 +3,7 @@
     <div class="py-6">
         <div class="mx-auto max-w-6xl px-4">
 
-            <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl">
+            <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl dark:border-white dark:border-2">
                 <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight text-white  ">
                     Video einreichen
                 </h1>
