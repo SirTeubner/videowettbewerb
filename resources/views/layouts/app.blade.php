@@ -19,7 +19,7 @@
     </head>
     <body class="font-sans antialiased bg-gray-100 min-h-screen flex flex-col">
 
-    <div class="flex-1 bg-gray-100 dark:bg-gray-900">
+    <div class="flex-1 bg-gray-100 dark:bg-gray-600">
         @include('layouts.navigation')
 
         @isset($header)

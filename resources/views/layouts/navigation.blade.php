@@ -30,14 +30,14 @@
                 <x-nav-link :href="route('gewinne')" :active="request()->routeIs('gewinne')">
                     Gewinne
                 </x-nav-link>
-            </div>
 
-            <!-- Einreichen Button -->
-            <a href="{{ route('einreichen') }}" class="hidden md:flex md:ms-10 lg:absolute lg:right-52">
-                <x-primary-button>
-                    Einreichen
-                </x-primary-button>
-            </a>
+                <!-- Einreichen Button -->
+                <a href="{{ route('einreichen') }}" class="flex">
+                    <x-primary-button>
+                        Einreichen
+                    </x-primary-button>
+                </a>
+            </div>
 
            <!-- Navbar sm screen -->
             <div class="relative flex items-center w-full sm:hidden">

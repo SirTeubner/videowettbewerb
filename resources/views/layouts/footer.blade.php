@@ -17,14 +17,10 @@
         </div>
 
         <!-- Platzhalter für Sponsorenlogos -->
-        <div class="text-center text-white text-2xl mb-4">
-            Sponsorenlogos
-        </div>
+        <img src="{{ asset('images/footer/partner.png') }}" class="w-auto md:max-w-xl mx-auto mb-4"/>
 
         <!-- Trennlinie -->
-        <div class="flex justify-center mb-4">
-            <hr class="w-96 border-white border-2">
-        </div>
+        <div class="flex h-0.5 bg-white rounded-full w-1/3 mx-auto mb-4"></div>
 
         <!-- Footer-Details -->
         <div class="flex flex-col sm:flex-row justify-center items-center gap-8 text-brandpurple text-base">
