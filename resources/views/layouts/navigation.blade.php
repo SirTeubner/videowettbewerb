@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="text-white sticky top-0 z-10">
+<nav x-data="{ open: false }" class="text-white sticky top-0 z-50">
     <!-- Primary Navigation Menu -->
     <div class="bg-black mx-auto relative flex items-center justify-between h-16 px-10">
         <div class="lg:mx-auto flex justify-center items-center">
@@ -31,13 +31,14 @@
                     Gewinne
                 </x-nav-link>
 
-                <!-- Einreichen Button -->
-                <a href="{{ route('einreichen') }}" class="flex">
-                    <x-primary-button>
-                        Einreichen
-                    </x-primary-button>
-                </a>
             </div>
+
+            <!-- Einreichen Button -->
+            <a href="{{ route('einreichen') }}" class="hidden md:inline-flex md:ms-10 lg:absolute lg:right-36">
+                <x-primary-button>
+                    Einreichen
+                </x-primary-button>
+            </a>
 
            <!-- Navbar sm screen -->
             <div class="relative flex items-center w-full md:hidden">
