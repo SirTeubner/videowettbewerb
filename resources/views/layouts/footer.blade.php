@@ -16,8 +16,8 @@
             </a>
         </div>
 
-        <!-- Platzhalter für Sponsorenlogos -->
-        <img src="{{ asset('images/footer/partner.png') }}" class="w-auto md:max-w-xl mx-auto mb-4"/>
+        <!-- Sponsorenlogos -->
+        <img src="{{ asset('images/footer/partner.png') }}" class="w-auto md:max-w-xl mx-auto mb-4 rounded-lg"/>
 
         <!-- Trennlinie -->
         <div class="flex h-0.5 bg-white rounded-full w-1/3 mx-auto mb-4"></div>

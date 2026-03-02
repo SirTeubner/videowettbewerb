@@ -64,14 +64,15 @@
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Der Wettbewerb wird im Zuge eines Maturaprojekts der HAK Zell am See veranstaltet.
+                    Der Wettbewerb wird im Zuge eines Maturaprojekts der HAK Zell am See veranstaltet. <br>
+                    Veranstalter des Wettbewerbs sind Arian Lackner, David Miska, Noah Teubner und Samuel Hirk.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Veranstalter des Wettbewerbs ist:
+                    rechtliche Ansprechperson:
                 </p>
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Arian Lackner e.U.<br>
+                    Arian Lackner<br>
                     Rettenbachstraße 128<br>
                     5730 Mittersill<br>
                     Östereich
