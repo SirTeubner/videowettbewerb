@@ -12,6 +12,11 @@ class Submission extends Model
         'nachname',
         'schule',
         'url',
+        'partners', // neu
+    ];
+
+    protected $casts = [
+        'partners' => 'array', // JSON <-> Array
     ];
 }
 
