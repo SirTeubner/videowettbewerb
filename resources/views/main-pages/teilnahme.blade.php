@@ -13,27 +13,27 @@
                 Thema: Was macht den Pinzgau für dich besonders?
             </h2>
 
-            <div class="grid md:grid-cols-7 grid-cols-2 gap-2">
+            <div class="grid md:grid-cols-8 grid-cols-2 gap-2">
                 <div class="md:col-span-2">- Videodauer:</div>
-                <div class="md:col-span-5">3–6 Minuten</div>
+                <div class="md:col-span-6">3–6 Minuten</div>
 
                 <div class="md:col-span-2">- Videoformat:</div>
-                <div class="md:col-span-5">Hoch- oder Querformat</div>
+                <div class="md:col-span-6">Hoch- oder Querformat</div>
 
                 <div class="md:col-span-2">- Teilnahme:</div>
-                <div class="md:col-span-5">alleine oder in Gruppen bis zu vier Personen</div>
+                <div class="md:col-span-6">alleine oder in Gruppen bis zu vier Personen</div>
 
                 <div class="md:col-span-2">- Abgabe:</div>
-                <div class="md:col-span-5">Video muss auf YouTube hochgeladen werden, es wird nur der Link abgegeben.</div>
+                <div class="md:col-span-6">Video muss auf YouTube hochgeladen werden, es wird nur der Link abgegeben. <a href="https://www.youtube.com" class="text-xs text-brandpurple">-> Tutorial: Youtube-Video hochladen</a></div>
 
                 <div class="md:col-span-2">- Einverständnis:</div>
-                <div class="md:col-span-5">Die Teilnahme setzt das Einverständnis eines Erziehungsberechtigten voraus.</div>
+                <div class="md:col-span-6">Die Teilnahme setzt das Einverständnis eines Erziehungsberechtigten voraus.</div>
 
                 <div class="md:col-span-2">- Teilnahmeschluss:</div>
-                <div class="md:col-span-5">Freitag, 17. April 2026</div>
+                <div class="md:col-span-6">Freitag, 17. April 2026</div>
 
                 <div class="md:col-span-2 text-brandpurple">- Wichtig:</div>
-                <div class="md:col-span-5"> Sämtliche Rechte bezüglich Bildmaterial und Musik müssen bei den Teilnehmenden liegen.</div>
+                <div class="md:col-span-6 text-brandpurple"> Sämtliche Rechte bezüglich Bildmaterial und Musik müssen bei den Teilnehmenden liegen.</div>
             </div>
 
             <p>
@@ -43,7 +43,7 @@
 
             <p class="text-brandpurple font-medium text-sm pb-5 text-center">
                 Bei weiteren Fragen bitten wir um Kontaktaufnahme <br> über Instagram
-                (<a class="underline hover:font-bold" href="https://instagram.com/videowettbewerb_pinzgau">instagram.com/videowettbewerb_pinzgau</a>) <br> oder per E‑Mail (<a class="underline hover:font-bold" href="mailto:2026@videowettbewerb.at">2026@videowettbewerb.at</a>).
+                (<a class="underline hover:font-bold" href="https://instagram.com/videowettbewerb_pinzgau" target="_blank">instagram.com/videowettbewerb_pinzgau</a>) <br> oder per E‑Mail (<a class="underline hover:font-bold" href="mailto:2026@videowettbewerb.at">2026@videowettbewerb.at</a>).
             </p>
 
         </div>
@@ -58,8 +58,8 @@
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
-            <div class="flex-1 space-y-6">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+            <div class="flex-1 space-y-2">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     1. Veranstalter
                 </h2>
 
@@ -68,7 +68,7 @@
                     Veranstalter des Wettbewerbs sind Arian Lackner, David Miska, Noah Teubner und Samuel Hirk.
                 </p>
 
-                <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
+                <p class="text-sm sm:text-base leading-relaxed text-justify">
                     rechtliche Ansprechperson:
                 </p>
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -79,7 +79,7 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     2. Teilnahmeberechtigt
                 </h2>
 
@@ -101,7 +101,7 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     3. Wettbewerbszeitraum
                 </h2>
 
@@ -110,11 +110,11 @@
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Später eingereichte Beiträge können nicht berücksichtigt werden
+                    Später eingereichte Beiträge können nicht berücksichtigt werden.
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     4. Anforderungen an die Beiträge
                 </h2>
 
@@ -132,7 +132,7 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     5. Ausschluss von Inhalten
                 </h2>
 
@@ -165,16 +165,17 @@
                 </div>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Der Veranstalter behaltet sich das Recht vor, Beiträge ohne Angabe von Gründen vom Wettbewerb auszuschließen.
+                    Die Veranstalter behalten sich das Recht vor, Beiträge ohne Angabe von Gründen vom Wettbewerb
+                    auszuschließen.
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     6. Urheber- und Nutzungsrechte
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Die Teilnehmenden versichern, dass sie alle Rechte an ihrem eingereichten Video besitzen
+                    Die Teilnehmenden versichern, dass sie alle Rechte an ihrem eingereichten Video besitzen.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -186,12 +187,13 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     7. Persönlichkeitsrechte & Einwilligung
                 </h2>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Alle im Video gezeigten Personen müssen mit der Aufnahme und Veröffentlichung einverstanden sein.
+                    Die Teilnehmer garantieren, dass alle im Video gezeigten Personen <br>
+                    mit der Aufnahme und Veröffentlichung des Videos einverstanden sind.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -200,7 +202,7 @@
 
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     8. Bewertung & Gewinne
                 </h2>
 
@@ -221,7 +223,7 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     9. Datenschutz
                 </h2>
 
@@ -238,7 +240,7 @@
                 </p>
                 <div class="flex h-0.5 bg-white rounded-full w-auto md:w-1/2 mt-8"></div>
 
-                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold py-5">
                     10. Sonstiges
                 </h2>
 

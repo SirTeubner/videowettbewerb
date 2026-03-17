@@ -26,7 +26,7 @@
                     PC, wo ich mich ebenfalls kreativ austoben kann.
                 </p>
 
-                <a href="https://www.instagram.com/arian_lackner/" class="text-brandpurple hover:font-bold px-4">
+                <a href="https://www.instagram.com/arian_lackner/" target="_blank" class="text-brandpurple hover:font-bold px-4">
                     @arian_lackner
                 </a>
             </div>
@@ -68,7 +68,7 @@
                     reise ich gerne und entdecke neue Orte.
                 </p>
 
-                <a href="https://www.instagram.com/dxvid.msk_/" class="text-brandpurple hover:font-bold px-4">
+                <a href="https://www.instagram.com/dxvid.msk_/" target="_blank" class="text-brandpurple hover:font-bold px-4">
                     @dxvid.msk_
                 </a>
             </div>
@@ -102,7 +102,7 @@
                     Um die viele Zeit vor dem Bildschirm auszugleichen, verbringe ich meine Freizeit am liebsten in der Natur. Besonders gerne bin ich in den Bergen unterwegs – sowohl mit als auch ohne Skiausrüstung. Wenn ich nicht gerade auf einem Gipfel stehe, findet man mich häufig auf dem Motorrad oder ganz klassisch im Fitnessstudio.
                 </p>
 
-                <a href="https://www.instagram.com/teubner.noah/" class="text-brandpurple hover:font-bold px-4">
+                <a href="https://www.instagram.com/teubner.noah/" target="_blank" class="text-brandpurple hover:font-bold px-4">
                     @teubner.noah
                 </a>
             </div>
@@ -143,7 +143,7 @@
                     im Pinzgau wird es dabei eigentlich nie langweilig.
                 </p>
 
-                <a href="https://www.instagram.com/samuelhirk/" class="text-brandpurple hover:font-bold px-4">
+                <a href="https://www.instagram.com/samuelhirk/" target="_blank" class="text-brandpurple hover:font-bold px-4">
                     @samuelhirk
                 </a>
             </div>
