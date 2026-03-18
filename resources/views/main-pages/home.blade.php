@@ -47,7 +47,7 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto my-1 md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Die Gewinne
+            Verlosung und Gewinne
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
@@ -76,7 +76,7 @@
             </div>
 
             <div class="flex-1">
-                <img src="{{ asset('images/main/gewinne.jpg') }}"
+                <img src="{{ asset('images/main/ski.JPG') }}"
                      alt="preis"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
