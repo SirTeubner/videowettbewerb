@@ -77,7 +77,7 @@
 
             <div class="flex-1">
                 <img src="{{ asset('images/main/ski.JPG') }}"
-                     alt="preis"
+                     alt="Ski"
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl object-cover shadow-xl">
             </div>
         </div>
