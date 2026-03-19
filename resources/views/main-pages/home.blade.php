@@ -58,15 +58,15 @@
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Ein Wettbewerb wäre natürlich nichts ohne die passenden Preise.
-                    Und die können wir dank unserer Partner auch bereitstellen. Den
-                    Sieger bzw. das Siegerteam erwartet unter anderem … von …. Doch
-                    auch die dahinter platzierten Teilnehmer erhalten stattliche Preise,
-                    beispielsweise … von …. Und selbst wenn ihr nicht unter den Ersten
-                    seid, unter allen Teilnehmern wird ein … von … verlost, mitmachen
-                    lohnt sich also doppelt: Nicht nur gebt ihr dem Pinzgau mit euren
-                    Videos ein neues Gesicht sondern habt gleichzeitig auch die Chance
-                    auf hochwertige Preise. Demnach, nichts wie ran an die Kamera, die
-                    Preise warten. Nähere Infos zu den Gewinnen gibt’s unten.
+                    Unter anderem warten auf die Gewinner Tageskarten für die
+                    Skigebiete Saalbach Hinterglemm Leogang Fieberbrunn,
+                    Schmittenhöhe und Rauriser Hochalmbahnen. Daneben auch noch
+                    diverse Gratiseintritte für Dieselkino oder Tauernspa. Auch
+                    Gutscheine von Intersport Scholz finden sich unter den Preisen.
+                    Unter allen Teilnehmenden wird außerdem ein Blizzard Ski von Sport
+                    2000 Simon verlost. Mitmachen lohnt sich also. Demnach, nichts wie
+                    ran an die Kamera, die Preise warten. Nähere Infos zu den Gewinnen
+                    gibt’s unten.
                 </p>
 
                 <a href="{{ route('gewinne') }}"
