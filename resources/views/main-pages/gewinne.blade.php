@@ -4,7 +4,7 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Verlosung
+            Verlosung eines Blizzard Black Pearl von Sport 2000 Simon
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
@@ -13,7 +13,9 @@
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
                     Unter allen Teilnehmenden wird ein Blizzard Black Pearl
                     Ski verlost. Mit der Teilnahme am Wettbewerb nehmt ihr
-                    auch automatisch an der Verlosung teil.
+                    auch automatisch an der Verlosung teil. Der Black Pearl ist
+                    ein hochwertiger All-Mountain-Ski, der für Vielseitigkeit
+                    auf der Piste steht.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -72,16 +74,17 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Titan Koffer
+            2x Titan Koffer aus Senoplast-Material
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    2 hochwertige Koffer von Titan stellt die Senoplast zur
-                    Verfügung. Gefertigt aus dem Senoplast-eigenen
-                    Material.
+                    Robuste Reisekoffer der Marke Titan, gefertigt aus dem in
+                    Piesendorf produzierten High-Tech-Material von
+                    Senoplast. Ein Beispiel für regionale Qualität im
+                    internationalen Einsatz.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -104,15 +107,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            3 Tagesskipässe
+            3 Tagesskipässe für die Rauriser Hochalmbahnen
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Die Rauriser Hochalmbahnen stellen 3 Tagesskipässe zur
-                    Verfügung. Gültig für Winter 2025/26 oder 2026/27.
+                    Flexible Tagespässe für die Wintersaisonen 2025/26 oder
+                    2026/27. Sie ermöglichen den direkten Zugang zum
+                    sportlichen Angebot im Raurisertal.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -135,14 +139,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            2 Tageskarten
+            2 Tageskarten für die Schmittenhöhe
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Die Schmitten stellen 2 Tageskarten zur Verfügung.
+                    Eintrittskarten für das gesamte Pisten- und Anlagennetz
+                    der Schmittenhöhe in Zell am See. Einsetzbar für einen
+                    kompletten Tag im regionalen Skigebiet.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -165,16 +171,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            4x Rucksack mit Goodies
+            4 Raiffeisen-Rucksäcke mit Goodies und Kinogutscheinen
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Von der Raiffeisenbank Pinzgau Mitte gibt es einen edlen
-                    Rucksack mit vielen verschiedenen Goodies. Zusätzlich
-                    dabei sind Kinogutscheine.
+                    Praktische Rucksäcke der Raiffeisenbank Pinzgau Mitte,
+                    ausgestattet mit nützlichen Accessoires und Gutscheinen
+                    für einen Kinobesuch in der Region.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -197,15 +203,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            4x Gutscheinkarte
+            4 Gutscheine à 20 Euro für Intersport Scholz
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    4 Gutscheine à 20 Euro gibt es für Intersport Scholz in Zell
-                    am See.
+                    Wertgutscheine, die flexibel für Sportausrüstung oder
+                    Serviceleistungen an den Standorten von Intersport
+                    Scholz in Zell am See eingelöst werden können.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -228,15 +235,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            4x Dieselkino Eintritt
+            4 Dieselkino Gutscheine
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    4 Gratis Eintritte gibt es für einen Film nach Wahl im
-                    Dieselkino.
+                    Gutscheine für aktuellen Filmgenuss im Dieselkino Bruck.
+                    Sie bieten freien Eintritt zu den Blockbustern im modern
+                    ausgestatteten Kino-Center.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -259,15 +267,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            2x Gratis Eintritt
+            2x Gratis-Eintritt für den Tauern SPA Kaprun
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    2 mal zu gewinnen gibt es einen Gratis Eintritt für den
-                    Tauernspa Kaprun.
+                    Tageskarten für die Wasser- und Saunawelt des Tauern
+                    SPA. Ideal zur Regeneration nach dem Sport oder als
+                    Ausgleich zum Alltag.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -297,7 +306,9 @@
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Bründl Sports stellt diverse Sachpreise zur Verfügung.
+                    Ausgewähltes Sport-Equipment aus dem Sortiment von
+                    Bründl Sports, das auf funktionelle Nutzung und Qualität
+                    im Outdoor-Bereich ausgerichtet ist.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -320,15 +331,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            4x stylische Trinkflasche
+            4x stylische Trinkflasche vom Kitzsteinhorn
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    4 stylische Trinkflaschen kommen von den
-                    Gletscherbahnen Kaprun.
+                    Langlebige und optisch ansprechende Trinkflaschen im
+                    Kitzsteinhorn-Design – ein praktischer Begleiter für Touren
+                    im hochalpinen Gelände oder die Freizeit.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -351,15 +363,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Glaskaraffe mit Gläsern
+            Porsche Design Glaskaraffe mit 4 Gläsern
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Eine moderne Glaskaraffe mit 4 Gläsern stellt der
-                    Tourismusverband Zell am See - Kaprun zur Verfügung.
+                    Ein hochwertiges Set im exklusiven Porsche Design, zur
+                    Verfügung gestellt vom Tourismusverband als regionaler
+                    Akzent für die eigenen vier Wände.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -382,15 +395,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Kühltasche mit Produkten
+            Kühltasche mit Produkten der Pinzgau Milch
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    Eine Kühltasche mit diversen Produkten wird von der
-                    Pinzgau Milch bereitgestellt.
+                    Eine praktische Tasche, gefüllt mit einer Auswahl an
+                    Milchprodukten, die direkt in Maishofen verarbeitet und
+                    veredelt wurden.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
@@ -413,14 +427,16 @@
     <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto md:my-10 lg:rounded-full md:rounded-none space-y-10 dark:border-white dark:border-2">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-            Großglockner Hochalpenstraße
+            2x Gratis-Eintritt für die Großglockner Hochalpenstraße
         </h1>
 
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 px-4 sm:px-8 md:px-10">
             <div class="flex-1 space-y-6">
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
-                    2 Gratis Eintritte für die Großglockner Hochalpenstraße.
+                    Freifahrten für die berühmte Gebirgsstraße, die den
+                    direkten Zugang zur hochalpinen Natur des Nationalparks
+                    Hohe Tauern ermöglichen.
                 </p>
 
                 <p class="text-sm sm:text-base leading-relaxed text-justify pb-5">
