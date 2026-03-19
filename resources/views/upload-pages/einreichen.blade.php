@@ -26,17 +26,6 @@
                         </div>
                     @endif
 
-                    {{-- Errors --}}
-                    @if($errors->any())
-                        <div class="mb-6 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-3 text-red-300">
-                            <ul class="list-disc ps-5">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
                     @php
                         $oldPartners = old('partners', []);
                     @endphp
@@ -128,7 +117,7 @@
                                        focus:border-brandpurple focus:ring-0"
                                 data-required
                             >
-                            @error('email') <p class="mt-1 text-xs text-red-400">{{ $message }}</p> @enderror
+                            @error('email') <p class="mt-1 text-xs text-red-400">Korrekte E-Mail eingeben</p> @enderror
                         </div>
 
                         {{-- Video Link + Tutorial-Link --}}
@@ -156,7 +145,9 @@
                                        focus:border-brandpurple focus:ring-0"
                                 data-required
                             >
-                            @error('url') <p class="mt-1 text-xs text-red-400">{{ $message }}</p> @enderror
+                            @error('url') <p class="mt-1 text-xs text-red-400">ganzen url inkl. "https://" eingeben
+                                <br> https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                            </p> @enderror
                         </div>
 
                         {{-- Partner (max. 3) --}}
