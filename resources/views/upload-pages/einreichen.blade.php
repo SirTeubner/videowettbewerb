@@ -92,10 +92,23 @@
                                 data-required
                             >
                                 <option value="" disabled {{ old('schule') ? '' : 'selected' }}>Schule auswählen...</option>
-                                {{-- Beispieloptionen – später dynamisch befüllen --}}
-                                <option value="schule_a" @selected(old('schule')==='schule_a')>Schule A</option>
-                                <option value="schule_b" @selected(old('schule')==='schule_b')>Schule B</option>
-                                <option value="schule_c" @selected(old('schule')==='schule_c')>Schule C</option>
+                                <option value="mittelschule_mittersill" @selected(old('schule')==='mittelschule_mittersill')>Mittelschule Mittersill</option>
+                                <option value="mittelschule_neukirchen_am_grossvenediger" @selected(old('schule')==='mittelschule_neukirchen_am_grossvenediger')>Mittelschule Neukirchen am Großvenediger</option>
+                                <option value="mittelschule_rauris" @selected(old('schule')==='mittelschule_rauris')>Mittelschule Rauris</option>
+                                <option value="mittelschule_taxenbach" @selected(old('schule')==='mittelschule_taxenbach')>Mittelschule Taxenbach</option>
+                                <option value="mittelschule_uttendorf" @selected(old('schule')==='mittelschule_uttendorf')>Mittelschule Uttendorf</option>
+                                <option value="mittelschule_bramberg_am_wildkogel" @selected(old('schule')==='mittelschule_bramberg_am_wildkogel')>Mittelschule Bramberg am Wildkogel</option>
+                                <option value="neue_und_musikmittelschule_zell_am_see" @selected(old('schule')==='neue_und_musikmittelschule_zell_am_see')>Neue &amp; Musikmittelschule Zell am See</option>
+                                <option value="mittelschule_maishofen" @selected(old('schule')==='mittelschule_maishofen')>Mittelschule Maishofen</option>
+                                <option value="gym_zell" @selected(old('schule')==='gym_zell')>Gym Zell</option>
+                                <option value="mittelschule_leogang" @selected(old('schule')==='mittelschule_leogang')>Mittelschule Leogang</option>
+                                <option value="mittelschule_saalfelden_stadt" @selected(old('schule')==='mittelschule_saalfelden_stadt')>Mittelschule Saalfelden Stadt</option>
+                                <option value="mittelschule_saalfelden_bahnhof" @selected(old('schule')==='mittelschule_saalfelden_bahnhof')>Mittelschule Saalfelden Bahnhof</option>
+                                <option value="hib_saalfelden" @selected(old('schule')==='hib_saalfelden')>Hib Saalfelden</option>
+                                <option value="ms_lofer" @selected(old('schule')==='ms_lofer')>MS Lofer</option>
+                                <option value="ms_bruck" @selected(old('schule')==='ms_bruck')>MS Bruck</option>
+                                <option value="ms_kaprun" @selected(old('schule')==='ms_kaprun')>MS Kaprun</option>
+                                <option value="ms_lend" @selected(old('schule')==='ms_lend')>MS Lend</option>
                             </select>
                             @error('schule') <p class="mt-1 text-xs text-red-400">{{ $message }}</p> @enderror
                         </div>
