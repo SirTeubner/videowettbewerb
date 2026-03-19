@@ -4,7 +4,7 @@
 
             <div class="relative overflow-hidden rounded-[3rem] bg-black px-8 py-10 shadow-2xl dark:border-white dark:border-2">
                 {{-- Titel + Partner hinzufügen --}}
-                <div class="mb-6 flex items-start justify-between">
+                <div class="mb-6 flex items-start justify-between me-[10rem] mt-[2rem]">
                     <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                         Video einreichen
                     </h1>
