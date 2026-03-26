@@ -8,6 +8,7 @@ class Submission extends Model
 {
     protected $fillable = [
         'email',
+        'phone',
         'vorname',
         'nachname',
         'schule',

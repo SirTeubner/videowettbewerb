@@ -116,6 +116,24 @@
                                 @error('email') <p class="mt-1 text-xs text-red-400">Korrekte E-Mail eingeben</p> @enderror
                             </div>
 
+                            {{-- Telefonnummer --}}
+                            <div>
+                                <label for="phone" class="block text-sm text-gray-300 mb-1">Telefonnummer</label>
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    name="phone"
+                                    value="{{ old('phone') }}"
+                                    required
+                                    placeholder="Telefonnummer eingeben..."
+                                    class="w-full rounded-full bg-black px-4 py-2 text-gray-200
+                                           border border-gray-600/70 placeholder:text-gray-500
+                                           focus:border-brandpurple focus:ring-0"
+                                    data-required
+                                >
+                                @error('phone') <p class="mt-1 text-xs text-red-400">Korrekte Telefonnummer eingeben</p> @enderror
+                            </div>
+
                             {{-- Video Link + Tutorial-Link --}}
                             <div>
                                 <div class="flex items-center justify-between mb-1">
