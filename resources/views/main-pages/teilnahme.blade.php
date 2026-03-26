@@ -24,7 +24,7 @@
                 <div class="md:col-span-6">alleine oder in Gruppen bis zu vier Personen</div>
 
                 <div class="md:col-span-2">- Abgabe:</div>
-                <div class="md:col-span-6">Video muss auf YouTube hochgeladen werden, es wird nur der Link abgegeben. <a href="https://www.youtube.com" class="text-xs text-brandpurple">-> Tutorial: Youtube-Video hochladen</a></div>
+                <div class="md:col-span-6">Video muss auf YouTube hochgeladen werden, es wird nur der Link abgegeben. <a href="https://support.google.com/youtube/answer/57407?hl=de" class="text-xs text-brandpurple">-> Tutorial: Youtube-Video hochladen</a></div>
 
                 <div class="md:col-span-2">- Einverständnis:</div>
                 <div class="md:col-span-6">Die Teilnahme setzt das Einverständnis eines Erziehungsberechtigten voraus.</div>
@@ -51,7 +51,7 @@
     <!-- Ende Abschnitt 1 -->
 
     <!-- Langfassung -->
-    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto mt-1 md:my-10 lg:rounded-[12rem] md:rounded-none space-y-10 dark:border-white dark:border-2">
+    <div class="bg-black text-white px-10 md:px-20 py-12 md:py-8 max-w-7xl mx-auto mt-1 md:my-10 lg:rounded-[12rem] md:rounded-none space-y-10">
 
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Langfassung
