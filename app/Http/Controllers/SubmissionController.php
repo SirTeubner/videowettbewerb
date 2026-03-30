@@ -16,6 +16,7 @@ class SubmissionController extends Controller
     {
         $validated = $request->validate([
             'email'                 => 'required|email',
+            'phone'                 => 'required|string|min:3|max:25',
             'vorname'               => 'required|min:2',
             'nachname'              => 'required|min:2',
             'schule'                => 'required|min:2',
@@ -38,6 +39,7 @@ class SubmissionController extends Controller
 
         $payload = [
             'email'    => $validated['email'],
+            'phone'    => $validated['phone'],
             'vorname'  => $validated['vorname'],
             'nachname' => $validated['nachname'],
             'schule'   => $validated['schule'],
